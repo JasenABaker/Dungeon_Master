@@ -12,6 +12,10 @@
 
 ![Wirefarme two](https://github.com/JasenABaker/Dungeon_Master/blob/master/public/images/Screen%20Shot%202018-01-03%20at%204.43.39%20PM.png)
 
+## Trello Board User Stories
+The user stories for this app are located [here.](https://trello.com/b/3zKTV2S6/project-two)
+
 
 #App
-THe app is located [here.](https://dashboard.heroku.com/apps/murmuring-cliffs-92834)
+THe app is located [here.](https://murmuring-cliffs-92834.herokuapp.com/)
+
