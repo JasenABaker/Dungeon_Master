@@ -196,7 +196,7 @@ img{
 }
 
 .btn.adventure:hover{
-  background-color: #97D0CA;
+  background-color: #97D0CA
 }
 .btn.DmEdit:hover{
   background-color: #A0B8CB
@@ -249,11 +249,15 @@ img{
   justify-content: space-between
 }
 .label{
-  font-size: 16px;
+  font-size: 18px;
 }
 .btn.adventure{
   align-self: center;
   background-color: #1B998B;
+}
+
+.btn.back {
+  align-self: center;
 }
 
 .btn_container{
