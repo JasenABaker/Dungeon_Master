@@ -49,6 +49,21 @@ router.get('/:DmId', (req, res) => {
         })
 })
 
+router.get('/:DmId/edit', (req, res) => {
+    const DmId = req.params.DmId
+    DungeonMaster.findById(DmId)
+        .then((Dm) => {
+            res.render('/edit', {
+                Dm,
+                DmId,
+                title: `${Dm.username}`
+            })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+})
+
 
 
 
