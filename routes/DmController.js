@@ -7,7 +7,10 @@ const DungeonMaster = require('../db/models/Dm')
 router.get('/', (req,res) =>{
     DungeonMaster.find()
     .then((DMs)=>{
-        res.json(DMs)
+        res.render('dm/index', {
+            DMs,
+            title: 'Dungeon Masters'
+        })
     })
     .catch((err)=>{
         console.log(err)

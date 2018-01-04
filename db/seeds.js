@@ -27,7 +27,7 @@ DungeonMaster.remove({}).then(() => {
             firstName: 'Jasen',
             lastName: 'Baker',
             username: 'Atramentous',
-            photoUrl: 'https://imgur.com/6pTp9Tz'
+            photoUrl: 'https://i.imgur.com/6pTp9Tz.jpg'
         }
     )
     return JasenBaker.save()
