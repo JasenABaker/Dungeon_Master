@@ -27,7 +27,10 @@ DungeonMaster.remove({}).then(() => {
             firstName: 'Jasen',
             lastName: 'Baker',
             username: 'Atramentous',
-            photoUrl: 'https://i.imgur.com/6pTp9Tz.jpg'
+            photoUrl: 'https://i.imgur.com/6pTp9Tz.jpg',
+            location: 'Sugar Hill, GA',
+            dmStyle: 'A strong emphasis on Role Playing.',
+            gamesRan: 13
         }
     )
     return JasenBaker.save()
@@ -37,6 +40,9 @@ DungeonMaster.remove({}).then(() => {
             firstName: 'Chris',
             lastName: 'Crosby',
             username: 'WorldsWorstWizard',
+            location: 'Bethlahem, GA',
+            dmStyle: 'Loves to make props and enhance the setting.',
+            gamesRan: 20
         }
     )
     return ChrisCrosby.save()

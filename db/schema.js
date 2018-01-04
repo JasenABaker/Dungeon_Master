@@ -28,7 +28,22 @@ const DungeonMasterSchema = new Schema (
             unique: false,
 
         },
-        adventure: []
+        location:{
+            type: String,
+            default: 'Somewhere in the Forgotten Realms',
+            required: false,
+            unique: false,
+        },
+        DmStyle: {
+            type: String,
+            required: false
+        },
+        gamesRan: {
+            type: Number,
+            default: 0,
+            required: false
+        },
+        adventures: []
 
     },
     {
