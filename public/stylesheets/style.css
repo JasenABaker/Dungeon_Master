@@ -273,6 +273,54 @@ img{
   background-color: #D1495B;
 }
 
+.subject.new{
+  width: 700px;
+}
+
+.master.add{
+  background-color: #EDAE49;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+label{
+  font-size: 16px;
+  color: #262021;
+  font-weight: 700;
+}
+
+input {
+  font-size: 16px;
+}
+
+
+.btn.submit{
+  border: none;
+  color: #E5E5E5;
+  font-size: 18px;
+  background-color: #D1495B;
+  align-self: flex-start;
+}
+
+.btn.submit:hover{
+  background-color: #893168;
+}
+.container.new{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
 @media only screen
  and (max-device-width: 500px) {
   .index_header {
