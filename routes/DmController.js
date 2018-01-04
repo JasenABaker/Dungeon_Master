@@ -17,6 +17,10 @@ router.get('/', (req,res) =>{
     })
 })
 
+router.get('/new', (req,res) =>{
+    res.render('Dm/new', { title: 'New Dungeon Master'})
+})
+
 router.get('/:DmId', (req,res)=>{
     const DmId = req.params.DmId
 
