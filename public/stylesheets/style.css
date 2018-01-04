@@ -175,6 +175,14 @@ footer {
   color: #ED4C43;
   font-weight: 700;
 }
+.card a{
+ height: 100%;
+ width: 100%;
+}
+
+.link {
+  text-decoration: none;
+}
 
 
 

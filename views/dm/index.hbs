@@ -1,18 +1,28 @@
 <div class="Dm_main">
-    <div class="index_header"><h1>{{title}}</h1></div>
-    <div class="itemView">
-    {{#each DMs}}
-    <div class="card">
-        <div class="image">
-        <img src="{{this.photoUrl}}" alt="{{this.username}}">
-        </div>
-        <div class="info">
-        <div class="username"><h2>{{this.username}}</h2></div>
-        <div class="name"><span>{{this.firstName}}</span> <span>{{this.lastName}}</span></div>
-        </div>
+    <div class="index_header">
+        <h1>{{title}}</h1>
     </div>
+    <div class="itemView">
+        {{#each DMs}}
 
-    {{/each}}
+        <a href="/Dm/{{this._id}}" class="link card">
+            <div class="image">
+                <img src="{{this.photoUrl}}" alt="{{this.username}}">
+            </div>
+            <div class="info">
+                <div class="username">
+                    <h2>{{this.username}}</h2>
+                </div>
+                <div class="name">
+                    <span>{{this.firstName}}</span>
+                    <span>{{this.lastName}}</span>
+                </div>
+
+            </div>
+
+
+        </a>
+        {{/each}}
     </div>
 
 
