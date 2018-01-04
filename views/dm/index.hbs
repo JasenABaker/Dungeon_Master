@@ -2,36 +2,34 @@
     <div class="index_header">
         <h1>{{title}}</h1>
     </div>
-<div class="pageContainer">
-    <a href="/Dm/new" class="btn DmNew"><span class="btn_text">New Dungeon Master</span> </a>
-
-    <div class="itemView">
-        {{#each DMs}}
-
-        <a href="/Dm/{{this._id}}" class="link card">
-            <div class="image">
-                <img src="{{this.photoUrl}}" alt="{{this.username}}">
-            </div>
-            <div class="info">
-                <div class="username">
-                    <h2>{{this.username}}</h2>
-                </div>
-                <div class="name">
-                    <span>{{this.firstName}}</span>
-                    <span>{{this.lastName}}</span>
-                </div>
-
-            </div>
-
-
+    <div class="pageContainer">
+        <a href="/Dm/new" class="btn DmNew">
+            <span class="btn_text">New Dungeon Master</span>
         </a>
-        {{/each}}
+
+        <div class="itemView">
+            {{#each DMs}}
+
+            <a href="/Dm/{{this._id}}" class="link card">
+                <div class="image">
+                    <img src="{{this.photoUrl}}" alt="{{this.username}}">
+                </div>
+                <div class="info">
+                    <div class="username">
+                        <h2>{{this.username}}</h2>
+                    </div>
+                    
+                </div>
+
+
+            </a>
+            {{/each}}
+        </div>
+
+
+
+
+
+
     </div>
-
-
-
-
-    
-
-</div>
 </div>

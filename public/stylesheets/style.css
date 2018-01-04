@@ -142,7 +142,7 @@ footer {
   height: 100%;
   width: 25%;
 }
-.image img{
+img{
   height: 100%;
   width: 100%;
 }
@@ -154,23 +154,21 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .username{
   margin-bottom: 0;
-}
-
-.name {
-  margin-top: 0;
 }
 
 
 .username  h2 {
   margin-bottom: 0;
   font-size: 36px;
-  color: #262021;
+  color: #ED4C43;
+ 
 }
 
-.name span{
+.text {
   margin-top: 0;
   color: #ED4C43;
   font-weight: 700;
@@ -202,7 +200,42 @@ width: 100%;
   background-color: #8E5572;
 }
 
+.index_header.show{
+  margin-bottom: 0;
+}
 
+.itemView.show {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.master {
+  height: 50%;
+  width: 70%;
+  background-color: #C5D86D;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(10, 10%)
+
+}
+.image_show {
+  grid-area: 2/2/9/6;
+  
+}
+
+.dm_info{
+  grid-area: 2/7/10/20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.label{
+  font-size: 16px;
+}
+.btn.adventure{
+  align-self: center;
+  background-color: #1B998B;
+}
 
 @media only screen
  and (max-device-width: 500px) {

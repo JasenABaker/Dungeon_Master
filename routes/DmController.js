@@ -28,6 +28,9 @@ router.get('/:DmId', (req,res)=>{
             title: `${Dm.username}`
         })
     })
+    .catch((err)=>{
+        console.log(err)
+    })
 })
 
 

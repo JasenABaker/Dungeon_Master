@@ -1,22 +1,27 @@
-<div class="Dm_main">
-    <div class="index_header">
+<div class="Dm_mainPage">
+    <div class="index_header show">
         <h1>{{title}}</h1>
     </div>
-    <div class="itemView">
+    <div class="itemView show">
         <div class="master">
-            <div class="image master">
+            <div class="image_show">
                 <img src="{{Dm.photoUrl}}" alt="{{Dm.username}}">
             </div>
-            <div class="name">First Name:
-                <span class="firstName">{{Dm.firstName}}</span>
+            <div class="dm_info">
+            <div class="label">First Name:
+                <span class="text">{{Dm.firstName}}</span>
             </div>
-            <div class="name">Last Name:
-                <span class="lastName">{{Dm.lastName}}</span>
+            <div class="label">Last Name:
+                <span class="text">{{Dm.lastName}}</span>
             </div>
-            <a href="/Dm/{{DmId}}/adventures" class="btn adventure">Adventures!</a>
+            <div class="label">Location: <span class="text">{{Dm.location}}</span></div>
+            <div class="label">Dungeon Master Style: <span class="text">{{Dm.dmStyle}}</span></div>
+            <div class="label">Games Ran: <span class="text">{{Dm.gamesRan}}</span></div>
+            <a href="/Dm/{{DmId}}/adventures" class="link btn adventure">Adventures!</a>
             <div class="btn_contaier">
-                <a href="/Dm/{{DmId}}/edit" class="btn DmEdit">Edit this DM</a>
-                <a href="/Dm/{{DmId}}/delete" class="btn DmDelete">Delete this DN</a>
+                <a href="/Dm/{{DmId}}/edit" class="link btn DmEdit">Edit this DM</a>
+                <a href="/Dm/{{DmId}}/delete" class="link btn DmDelete">Delete this DN</a>
+                </div>
             </div>
         </div>
     </div>

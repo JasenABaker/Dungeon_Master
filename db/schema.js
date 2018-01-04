@@ -34,7 +34,7 @@ const DungeonMasterSchema = new Schema (
             required: false,
             unique: false,
         },
-        DmStyle: {
+        dmStyle: {
             type: String,
             required: false
         },
