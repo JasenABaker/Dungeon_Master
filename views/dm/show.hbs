@@ -1,6 +1,7 @@
 <div class="Dm_mainPage">
     <div class="index_header show">
-        <h1>{{title}}</h1>
+        <h1>Dungeon Master</h1>
+        <h2 class="subject">{{title}}</h2>
     </div>
     <div class="itemView show">
         <div class="master">
@@ -17,10 +18,10 @@
             <div class="label">Location: <span class="text">{{Dm.location}}</span></div>
             <div class="label">Dungeon Master Style: <span class="text">{{Dm.dmStyle}}</span></div>
             <div class="label">Games Ran: <span class="text">{{Dm.gamesRan}}</span></div>
-            <a href="/Dm/{{DmId}}/adventures" class="link btn adventure">Adventures!</a>
-            <div class="btn_contaier">
-                <a href="/Dm/{{DmId}}/edit" class="link btn DmEdit">Edit this DM</a>
-                <a href="/Dm/{{DmId}}/delete" class="link btn DmDelete">Delete this DN</a>
+            <a href="/Dm/{{DmId}}/adventures" class="link btn adventure"><span class="btn_text"> Adventures!</span></a>
+            <div class="btn_container">
+                <a href="/Dm/{{DmId}}/edit" class="link btn DmEdit"><span class="btn_text"> Edit this DM</span></a>
+                <a href="/Dm/{{DmId}}/delete" class="link btn DmDelete"><span class="btn_text"> Delete this DM</span></a>
                 </div>
             </div>
         </div>

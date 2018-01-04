@@ -86,7 +86,6 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
 .btn_text{
   color: #E5E5E5;
   font-size: 18px
@@ -156,6 +155,7 @@ img{
   align-items: center;
   justify-content: center;
 }
+
 .username{
   margin-bottom: 0;
 }
@@ -165,18 +165,13 @@ img{
   margin-bottom: 0;
   font-size: 36px;
   color: #ED4C43;
- 
 }
 
 .text {
-  margin-top: 0;
   color: #ED4C43;
   font-weight: 700;
 }
-.card a{
-height: 100%;
-width: 100%;
-}
+
 
 .link {
   text-decoration: none;
@@ -202,6 +197,15 @@ width: 100%;
 
 .index_header.show{
   margin-bottom: 0;
+  display:flex;
+
+}
+.index_header.show h1, .index_header.show h2{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.index_header.show h2{
+  margin-left: 400px;
 }
 
 .itemView.show {
@@ -215,11 +219,17 @@ width: 100%;
   background-color: #C5D86D;
   display: grid;
   grid-template-columns: repeat(20, 5%);
-  grid-template-rows: repeat(10, 10%)
+  grid-template-rows: repeat(10, 10%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
 
 }
 .image_show {
   grid-area: 2/2/9/6;
+  
+}
+.subject {
+  color: #ED4C43;
+  font-size: 52px;
   
 }
 
@@ -235,6 +245,19 @@ width: 100%;
 .btn.adventure{
   align-self: center;
   background-color: #1B998B;
+}
+
+.btn_container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn.DmEdit{
+  background-color: #30638E;
+}
+
+.btn.DmDelete{
+  background-color: #D1495B;
 }
 
 @media only screen
