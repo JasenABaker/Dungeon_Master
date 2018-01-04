@@ -32,7 +32,8 @@ const DungeonMasterSchema = new Schema (
 
     },
     {
-        timestamps:{}
+        timestamps:{},
+        usePushEach: true
     }
 )
 
