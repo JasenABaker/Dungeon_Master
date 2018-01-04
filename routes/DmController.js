@@ -17,6 +17,19 @@ router.get('/', (req,res) =>{
     })
 })
 
+router.get('/:DmId', (req,res)=>{
+    const DmId = req.params.DmId
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        res.render('dm/show', {
+            DmId,
+            Dm,
+            title: `${Dm.username}`
+        })
+    })
+})
+
 
 
 
