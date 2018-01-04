@@ -195,6 +195,15 @@ img{
   background-color: #8E5572;
 }
 
+.btn.adventure:hover{
+  background-color: #97D0CA;
+}
+.btn.DmEdit:hover{
+  background-color: #A0B8CB
+}
+.btn.DmDelete:hover{
+  background-color: #EAACB4;
+}
 .index_header.show{
   margin-bottom: 0;
   display:flex;
