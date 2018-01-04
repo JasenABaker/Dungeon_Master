@@ -53,7 +53,7 @@ router.get('/:DmId/edit', (req, res) => {
     const DmId = req.params.DmId
     DungeonMaster.findById(DmId)
         .then((Dm) => {
-            res.render('/edit', {
+            res.render('dm/edit', {
                 Dm,
                 DmId,
                 title: `${Dm.username}`
@@ -62,6 +62,18 @@ router.get('/:DmId/edit', (req, res) => {
         .catch((err)=>{
             console.log(err)
         })
+})
+
+router.put('/:DmId', (req, res)=>{
+    const DmId = req.params.DmId
+    const updatedDm = req.body
+    DungeonMaster.findByIdAndUpdate(DmId, updatedDm, {new: true})
+    then(()=>{
+        res.redirect(`/${DmId}`)
+    })
+    .catch((err) =>{
+        console.log(err)
+    })
 })
 
 
