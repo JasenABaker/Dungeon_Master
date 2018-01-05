@@ -6,6 +6,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override')
 
 const indexController = require('./routes/indexController')
 const DmController = require('./routes/DmController')
@@ -13,6 +14,8 @@ const users = require('./routes/users');
 
 const app = express();
 
+
+app.use(methodOverride('_method'))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

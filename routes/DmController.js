@@ -68,8 +68,8 @@ router.put('/:DmId', (req, res)=>{
     const DmId = req.params.DmId
     const updatedDm = req.body
     DungeonMaster.findByIdAndUpdate(DmId, updatedDm, {new: true})
-    then(()=>{
-        res.redirect(`/${DmId}`)
+    .then(()=>{
+        res.redirect(`/Dm/${DmId}`)
     })
     .catch((err) =>{
         console.log(err)
