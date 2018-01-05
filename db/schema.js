@@ -9,9 +9,8 @@ const AdventureSchema = new Schema(
     {
         name: {
             type: String,
-            required: true,
-            unique: true,
-            sparse: true
+            required: [true, 'must put a name'],
+        
         },
         description: {
             type: String,

@@ -23,7 +23,7 @@ mongoose.connection.on('error', (error) => {
 })
 
 DungeonMaster.remove({}).then(() => {
-    const jasenBaker = new DungeonMaster(
+    const jasenBaker = new DungeonMaster (
         {
             firstName: 'Jasen',
             lastName: 'Baker',
@@ -35,28 +35,28 @@ DungeonMaster.remove({}).then(() => {
         }
     )
 
-    const minesPhandelver = new Adventure(
-        {
+    const minesPhandelver = new Adventure({
             name: 'Lost Mines of Phandelver',
-            descriptions: `Lost Mine of Phandelver is an adventure for four to five
+            description: `Lost Mine of Phandelver is an adventure for four to five
             characters of 1st level. During the course of the adventure,
             the characters will advance to 5th level. The adventure
             is set a short distance from the city of Neverwinter in the
             Sword Coast region of the Forgotten Realms setting. The
             Sword Coast is part of the North-a vast realm of free
             settlements surrounded by wilderness and adventure.`
-        }
-    )
-    const askDirections = new Adventure(
-        {
+        })
+
+
+    const askDirections = new Adventure({
             name: 'Never Ask Directions',
             description: `When the party stops to ask directions of a reclusive halfling, 
             they find him eagar to point out the way. Unfortunately, 
             the path he directs them on is straigt towars a troop of 
             bandits with who the halfling intends to settle an old score.`
-        }
-    )
-    jasenBaker.adventures.push(minesPhandelver, askDirections)
+        })
+    
+    jasenBaker.adventures.push(minesPhandelver, askDirections)    
+    
     return jasenBaker.save()
 }).then(() => {
     const chrisCrosby = new DungeonMaster(
@@ -81,7 +81,7 @@ DungeonMaster.remove({}).then(() => {
     const fistTorm = new Adventure (
         {
             name: 'The Fist of Torm',
-            description: ` After a heavy storm at sea, the ship the PC’s are on 
+            description: `After a heavy storm at sea, the ship the PC’s are on 
             have to put into a safe harbor. Unfortunately that harbor was Daggerford, 
             a town under the control of the Brotherhood of Torm and locked down. 
             They run afoul of the sinister Zackam Laughingshadow, 
