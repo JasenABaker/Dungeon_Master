@@ -64,6 +64,19 @@ router.get('/:DmId/edit', (req, res) => {
         })
 })
 
+router.get('/:DmId/delete', (req, res) =>{
+    const DmId = req.params.DmId
+
+    DungeonMaster.findByIdAndRemove(DmId)
+    .then(()=>{
+        res.redirect("/Dm")
+        return DungeonMaster.save()
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
 router.put('/:DmId', (req, res)=>{
     const DmId = req.params.DmId
     const updatedDm = req.body
