@@ -4,9 +4,34 @@ const Schema = mongoose.Schema
 mongoose.Promise = global.Promise
 
 
-const DungeonMasterSchema = new Schema (
+
+const AdventureSchema = new Schema(
     {
-        firstName:{
+        name: {
+            type: String,
+            required: true,
+            unique: true,
+            sparse: true
+        },
+        description: {
+            type: String,
+            required: false,
+            default: 'Dungeons and Dragons Adventure'
+        },
+        players: [],
+        encounters: [],
+    },
+    {
+        timestamps: {},
+        usePushEach: true
+    }
+
+)
+
+
+const DungeonMasterSchema = new Schema(
+    {
+        firstName: {
             type: String,
             required: true,
             unique: false
@@ -16,19 +41,20 @@ const DungeonMasterSchema = new Schema (
             required: true,
             unique: false
         },
-        username:{
+        username: {
             type: String,
             required: true,
-            unique: true
+            unique: true,
+            sparse: true
         },
-        photoUrl:{
+        photoUrl: {
             type: String,
             default: 'http://pre06.deviantart.net/74dc/th/pre/i/2013/046/6/8/dungeon_master_by_axlsalles-d5v1nco.jpg',
             required: false,
             unique: false,
 
         },
-        location:{
+        location: {
             type: String,
             default: 'Somewhere in the Forgotten Realms',
             required: false,
@@ -43,16 +69,17 @@ const DungeonMasterSchema = new Schema (
             default: 0,
             required: false
         },
-        adventures: []
+        adventures: [AdventureSchema]
 
     },
     {
-        timestamps:{},
+        timestamps: {},
         usePushEach: true
     }
 )
 
 
-module.exports ={
-    DungeonMasterSchema
+module.exports = {
+    DungeonMasterSchema,
+    AdventureSchema
 }
