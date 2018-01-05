@@ -29,6 +29,24 @@ router.get('/new', (req,res)=>{
     })
 })
 
+
+router.post('/', (req,res)=>{
+    const DmId = req.params.DmId
+    const newAdventure = req.body
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        Dm.adventures.push(newAdventure)
+        return Dm.save()
+    })
+    .then(() =>{
+        res.redirect(`/Dm/${DmID}}/adventures`)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
 router.get('/:AdvenId', (req,res) => {
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
