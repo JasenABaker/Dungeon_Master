@@ -1,0 +1,42 @@
+<div class="Dm_main">
+    <div class="index_header show adven">
+        <h1>{{Dm.username}}</h1>
+        <h2 class="subject">{{title}}</h2>
+    </div>
+    <div class="container adven">
+
+        <div class="btn_container adven">
+            <a href="/Dm/{{DmId}}/adventure/new" class="btn AdvenNew">
+                <span class="btn_text">New Adventure</span>
+            </a>
+            <a href="/Dm/{{DmId}}" class="btn AdvenBack">
+                <span class="btn_text">Back to {{Dm.username}}</span>
+            </a>
+        </div>
+
+        <div class="card_container">
+            {{#each adventures}}
+
+            <a href="/Dm/{{../DmId}}/adventure/{{this.id}}" class="link card adven">
+                <div class="info">
+                    <div class="username adven">
+                        <h2>{{this.name}}</h2>
+                    </div>
+                   
+
+                </div>
+
+
+            </a>
+            {{/each}}
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+</div>

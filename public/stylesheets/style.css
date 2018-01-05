@@ -1,3 +1,6 @@
+/* Universal page css */
+
+
 body {
   height: 100vh;
   width: 100vw;
@@ -7,6 +10,8 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 
 }
+
+/* top level page stuff */
 .page{
   height: 100vh;
   width: 100vw;
@@ -14,38 +19,6 @@ body {
   flex-direction: row;
   background-color: #E5E5E5;
   
-
-}
-.index_header{
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
-  width: 40vw;
-  height: 30vh;
-  /* border: 5px solid gray; */
-}
-
-.index_header h1{
-  margin: 0px 20px;
-  font-size: 48px;
-  color: #262021;
-  
-}
-.highlight {
-  font-size: 64;
-  color: #ED4C43;
-}
-.secondPart{
-  align-self: flex-end;
-}
-
-footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 10%;
-  width: 80%;
-  background-color: #2E294E;
 
 }
 .main{
@@ -59,6 +32,26 @@ footer {
   /* border: 5px solid green; */
 
 }
+.index_header{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 30vh;
+  /* border: 5px solid gray; */
+}
+.index_header.show{
+  margin-bottom: 0;
+  display:flex;
+}
+.index_header.adven{
+  margin-bottom: 0
+}
+
+
+
+
+/* content container css */
 .center {
   height: 100%;
   width: 100%;
@@ -67,14 +60,126 @@ footer {
   align-items: center;
   /* border: 5px solid gray; */
 }
-
-.center h3{
-  font-size: 24px;
-  font-weight: 700;
+.side {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  /* border: 5px solid gray; */
+  position: relative;
 }
-.center p{
-  margin: 10px 50px 50px 100px;
-  font-size: 18px;
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container.adven{
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.itemView{
+  margin: 10px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.itemView.show {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container.new{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.card_container {
+  height: 95%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 10%;
+  width: 80%;
+  background-color: #2E294E;
+}
+
+
+
+/* single content css */
+.card {
+  height: 30%;
+  width: 40%;
+  background-color: #AAAE7F;
+  display: flex;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
+}
+.card.adven{
+  height: 25%;
+  width: 35%;
+  background-color: #B0ADAE;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  border: #262021 5px solid;
+}
+
+.master {
+  height: 50%;
+  width: 70%;
+  background-color: #C5D86D;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(10, 10%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
+
+}
+
+.master.add{
+  background-color: #EDAE49;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dm_info{
+  grid-area: 2/7/10/20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.info{
+  width: 75%;
+  height: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* Button Css */
+.link {
+  text-decoration: none;
 }
 
 .btn{
@@ -86,25 +191,93 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.btn.adventure{
+  align-self: center;
+  background-color: #1B998B;
+}
+
+.btn.back {
+  align-self: center;
+}
+
+.btn_container{
+  display: flex;
+  justify-content: space-around;
+}
+.btn_container.adven{
+  height: 5%;
+}
+
+.btn.DmEdit{
+  background-color: #30638E;
+}
+
+.btn.DmDelete{
+  background-color: #D1495B;
+}
+
+.btn.DmNew{
+  background-color: #BBBE64;
+}
+
+.btn.AdvenNew {
+  background-color: #EDAE49;
+}
+
+/* form submit button css */
+.btn.submit{
+  border: none;
+  color: #E5E5E5;
+  font-size: 18px;
+  background-color: #D1495B;
+  align-self: flex-start;
+}
+/* button text Css */
 .btn_text{
   color: #E5E5E5;
   font-size: 18px
 }
-.side {
-  display: flex;
-  justify-content: flex-end;
-  width: 50%;
-  /* border: 5px solid gray; */
-  position: relative;
+
+
+
+
+/* hover states */
+.btn:hover, .card:hover {
+  background-color: #2E294E;
 }
-.color, .monst {
-  position: absolute;
+.card.adven:hover{
+  background-color: #BBBE64;
 }
-.color{
-  background-color: #ED4C43;
+.btn.adventure:hover{
+  background-color: #97D0CA
+}
+.btn.DmEdit:hover{
+  background-color: #A0B8CB
+}
+.btn.DmDelete:hover{
+  background-color: #EAACB4;
+}
+.btn.DmNew:hover {
+  background-color: #8E5572;
+}
+.btn.submit:hover{
+  background-color: #893168;
+}
+.btn.AdvenNew:hover{
+  background-color: #FF521B;
+}
+
+
+
+/* img css */
+.image {
   height: 100%;
-  width: 50%;
-  align-self: flex-end;
+  width: 25%;
+}
+img{
+  height: 100%;
+  width: 100%;
 }
 .monst{
   padding-right: 20%;
@@ -120,94 +293,82 @@ footer {
   width: 100%;
 }
 
-.itemView{
-  margin: 10px;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.image_show {
+  grid-area: 2/2/9/6;
+  
 }
 
-.card {
-  height: 30%;
-  width: 40%;
-  background-color: #AAAE7F;
-  display: flex;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
-}
 
-.image {
-  height: 100%;
-  width: 25%;
-}
-img{
+
+
+/* form css */
+form {
   height: 100%;
   width: 100%;
-}
-
-.info{
-  width: 75%;
-  height: 100%;
-  align-self: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
+}
+label{
+  font-size: 16px;
+  color: #262021;
+  font-weight: 700;
+}
+input {
+  font-size: 16px;
 }
 
+
+/* Tag peices */
+
+.highlight {
+  font-size: 64;
+  color: #ED4C43;
+}
+.secondPart{
+  align-self: flex-end;
+}
+.center h3{
+  font-size: 24px;
+  font-weight: 700;
+}
+.center p{
+  margin: 10px 50px 50px 100px;
+  font-size: 18px;
+}
+.color, .monst {
+  position: absolute;
+}
+.color{
+  background-color: #ED4C43;
+  height: 100%;
+  width: 50%;
+  align-self: flex-end;
+}
 .username{
   margin-bottom: 0;
 }
-
-
 .username  h2 {
   margin-bottom: 0;
   font-size: 36px;
   color: #ED4C43;
 }
+.username.adven h2{
+  font-size: 24px;
+  font-weight: bold;
+  color:#393435;
+}
+
 
 .text {
   color: #ED4C43;
   font-weight: 700;
 }
-
-
-.link {
-  text-decoration: none;
-}
-
-.pageContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
-.btn:hover, .card:hover {
-  background-color: #2E294E;
-}
-.btn.DmNew{
-  background-color: #BBBE64;
-}
-.btn.DmNew:hover {
-  background-color: #8E5572;
-}
-
-.btn.adventure:hover{
-  background-color: #97D0CA
-}
-.btn.DmEdit:hover{
-  background-color: #A0B8CB
-}
-.btn.DmDelete:hover{
-  background-color: #EAACB4;
-}
-.index_header.show{
-  margin-bottom: 0;
-  display:flex;
-
+.index_header h1 {
+  margin: 0px 20px;
+  font-size: 48px;
+  color: #262021;
+  
 }
 .index_header.show h1, .index_header.show h2{
   margin-top: 0;
@@ -216,110 +377,33 @@ img{
 .index_header.show h2{
   margin-left: 400px;
 }
+.index_header.show.adven h2{
+  margin-left: 200px;
+}
 
-.itemView.show {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.master {
-  height: 50%;
-  width: 70%;
-  background-color: #C5D86D;
-  display: grid;
-  grid-template-columns: repeat(20, 5%);
-  grid-template-rows: repeat(10, 10%);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
-
-}
-.image_show {
-  grid-area: 2/2/9/6;
-  
-}
 .subject {
   color: #ED4C43;
   font-size: 52px;
   
 }
-
-.dm_info{
-  grid-area: 2/7/10/20;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between
-}
 .label{
   font-size: 18px;
 }
-.btn.adventure{
-  align-self: center;
-  background-color: #1B998B;
-}
-
-.btn.back {
-  align-self: center;
-}
-
-.btn_container{
-  display: flex;
-  justify-content: space-around;
-}
-
-.btn.DmEdit{
-  background-color: #30638E;
-}
-
-.btn.DmDelete{
-  background-color: #D1495B;
-}
-
 .subject.new{
   width: 700px;
 }
 
-.master.add{
-  background-color: #EDAE49;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-label{
-  font-size: 16px;
-  color: #262021;
-  font-weight: 700;
-}
-
-input {
-  font-size: 16px;
-}
 
 
-.btn.submit{
-  border: none;
-  color: #E5E5E5;
-  font-size: 18px;
-  background-color: #D1495B;
-  align-self: flex-start;
-}
 
-.btn.submit:hover{
-  background-color: #893168;
-}
-.container.new{
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-}
-form {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
 
+
+
+
+
+
+
+/* responsive css,put in another file */
 
 @media only screen
  and (max-device-width: 500px) {
