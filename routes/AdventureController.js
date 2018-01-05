@@ -40,7 +40,7 @@ router.post('/', (req,res)=>{
         return Dm.save()
     })
     .then(() =>{
-        res.redirect(`/Dm/${DmID}}/adventures`)
+        res.redirect(`/Dm/${DmId}/adventures`)
     })
     .catch((err)=>{
         console.log(err)
