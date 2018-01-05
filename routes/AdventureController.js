@@ -28,12 +28,15 @@ router.get('/:AdvenId', (req,res) => {
     DungeonMaster.findById(DmId)
     .then((Dm) =>{
         const adventure = Dm.adventures.id(AdvenId)
+        
         res.render('adventures/show', {
             DmId,
             adventure,
             title: `${adventure.name}`
-
         })
+    
+    }).catch((err)=>{
+        console.log(err)
     })
 })
 

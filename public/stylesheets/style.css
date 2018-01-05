@@ -81,6 +81,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
+
 }
 .itemView{
   margin: 10px;
@@ -136,6 +137,17 @@ footer {
   justify-content: space-between;
   border-radius: 15px;
   border: #262021 5px solid;
+}
+.advenShow{
+  height: 75%;
+  width: 75%;
+  background-color: #B0ADAE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 15px;
+  border: #262021 3px solid;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
 }
 
 .master {
@@ -225,6 +237,10 @@ footer {
   background-color: #EDAE49;
 }
 
+.btn.AdvenEncounter{
+  background-color: #7AC74F;
+}
+
 /* form submit button css */
 .btn.submit{
   border: none;
@@ -266,6 +282,9 @@ footer {
 }
 .btn.AdvenNew:hover{
   background-color: #FF521B;
+}
+.btn.AdvenEncounter:hover {
+  background-color: #436D2C;
 }
 
 
@@ -358,8 +377,6 @@ input {
   font-weight: bold;
   color:#393435;
 }
-
-
 .text {
   color: #ED4C43;
   font-weight: 700;
@@ -391,6 +408,11 @@ input {
 }
 .subject.new{
   width: 700px;
+}
+
+.descript{
+  text-align: center;
+  font-size: 24px;
 }
 
 

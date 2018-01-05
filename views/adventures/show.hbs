@@ -1,0 +1,38 @@
+<div class="Dm_main">
+    <div class="index_header show adven">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="container adven">
+        <a href="/Dm/{{DmId}}/adventures" class="btn AdvenBack">
+            <span class="btn_text">Back to Adventures</span>
+        </a>
+
+
+        <div class="card_container">
+            <div class="advenShow">
+                    <div class="descript">
+                        <p>{{adventure.description}}</p>
+                    </div>
+                
+
+                <div class="btn_container adven">
+                    <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}/players" class="btn AdvenNew">
+                        <span class="btn_text">To Players</span>
+                    </a>
+                    <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}/encounters" class="btn AdvenEncounter">
+                        <span class="btn_text">To Encounters</span>
+                    </a>
+                    <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}/edit" class="btn DmEdit">
+                        <span class="btn_text">Edit Adventure</span>
+                    </a>
+                    <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}/delete" class="btn DmDelete">
+                        <span class="btn_text">Delete Adventure</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
