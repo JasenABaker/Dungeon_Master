@@ -21,6 +21,22 @@ router.get('/', (req, res)=>{
 
 })
 
+router.get('/:AdvenId', (req,res) => {
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+
+    DungeonMaster.findById(DmId)
+    .then((Dm) =>{
+        const adventure = Dm.adventures.id(AdvenId)
+        res.render('adventures/show', {
+            DmId,
+            adventure,
+            title: `${adventure.name}`
+
+        })
+    })
+})
+
 
 
 
