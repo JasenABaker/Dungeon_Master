@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/new', (req, res) => {
-    res.render('Dm/new', { title: 'New Dungeon Master' })
+    res.render('dm/new', { title: 'New Dungeon Master' })
 })
 
 
