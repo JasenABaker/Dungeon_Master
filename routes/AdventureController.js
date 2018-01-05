@@ -21,6 +21,14 @@ router.get('/', (req, res)=>{
 
 })
 
+router.get('/new', (req,res)=>{
+    const DmId = req.params.DmId
+    res.render('adventures/new', {
+        DmId,
+        title: 'New Adventure'
+    })
+})
+
 router.get('/:AdvenId', (req,res) => {
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
