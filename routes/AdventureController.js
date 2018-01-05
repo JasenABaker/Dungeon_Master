@@ -82,6 +82,28 @@ router.get('/:AdvenId/edit', (req,res)=>{
     })
 })
 
+router.put('/', (req, res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const updatedAdven = req.body
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        Dm.adventures.id(AdvenId).remove()
+        return Dm.save()
+    })
+    .then((Dm)=>{
+        Dm.adventures.push(updatedAdven)
+        return Dm.save()
+    })
+    .then (()=>{
+        res.redirect(`/Dm/${DmId}/adventures`)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
 
 
 
