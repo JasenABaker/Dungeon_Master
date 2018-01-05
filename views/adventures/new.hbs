@@ -3,23 +3,31 @@
         <h1>{{title}}</h1>
     </div>
     <div class="container adven">
-        
+
 
 
         <div class="card_container">
 
             <div class="advenShow">
-                    <form action="/Dm/{{DmId}}/adventures" method="POST">
-                    <div class="form"><label for="name"></label><input type="text" class="input" name="name"></div>
-                    <div class="form"><label for="description"></label><input type="text" class="input" name="description"></div>
-                    
-                    <input type="submit" class="btn submit" value="Create Adventure">
-                    </form>
+                <form class="adven_form" action="/Dm/{{DmId}}/adventures" method="POST" id="form1">
+                    <div class="add adven">
+                        <div class="form adven">
+                            <label for="name">Name:</label>
+                            <input type="text" class="input" name="name">
+                        </div>
+                        <div class="form adven">
+                            <label for="description">Description:</label>
+                            <textarea name="description"  cols="40" rows="5" form="form1"></textarea>
+                        </div>
+
+                        <input type="submit" class="btn submitAdven" value="Create Adventure">
+                    </div>
+                </form>
 
                 <div class="btn_container adven">
-            <a href="/Dm/{{DmId}}/adventures" class="btn AdvenBack">
-            <span class="btn_text">Back to Adventures</span>
-                </a>
+                    <a href="/Dm/{{DmId}}/adventures" class="btn AdvenBack">
+                        <span class="btn_text">Back to Adventures</span>
+                    </a>
                 </div>
             </div>
 

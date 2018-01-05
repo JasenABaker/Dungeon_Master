@@ -168,6 +168,16 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
+.add.adven{
+  background-color: #7AC74F;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
+}
 
 .dm_info{
   grid-area: 2/7/10/20;
@@ -249,6 +259,13 @@ footer {
   background-color: #D1495B;
   align-self: flex-start;
 }
+.btn.submitAdven{
+  border: none;
+  color: #E5E5E5;
+  font-size: 18px;
+  background-color: #30638E;
+}
+
 /* button text Css */
 .btn_text{
   color: #E5E5E5;
@@ -268,7 +285,7 @@ footer {
 .btn.adventure:hover{
   background-color: #97D0CA
 }
-.btn.DmEdit:hover{
+.btn.DmEdit:hover, .btn.submitAdven:hover{
   background-color: #A0B8CB
 }
 .btn.DmDelete:hover{
@@ -321,7 +338,7 @@ img{
 
 
 /* form css */
-form {
+.dm_form {
   height: 100%;
   width: 100%;
   display: flex;
@@ -335,6 +352,18 @@ label{
 }
 input {
   font-size: 16px;
+}
+.adven_form{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.form.adven{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
 }
 
 
