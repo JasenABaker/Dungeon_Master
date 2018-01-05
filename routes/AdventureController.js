@@ -77,8 +77,25 @@ router.get('/:AdvenId/edit', (req,res)=>{
         res.render('adventures/edit', {
             DmId,
             adventure,
-            title: `${adventure.nam}`
+            title: `${adventure.name}`
         })
+    })
+})
+
+router.get('/:AdvenId/delete', (req, res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        Dm.adventures.id(AdvenId).remove()
+        return Dm.save()
+    })
+    .then(()=>{
+        res.redirect(`/Dm/${DmId}/adventures`)
+    })
+    .catch((err)=>{
+        console.log(err)
     })
 })
 

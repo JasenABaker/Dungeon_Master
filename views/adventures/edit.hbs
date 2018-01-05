@@ -1,0 +1,38 @@
+<div class="Dm_main">
+    <div class="index_header show adven">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="container adven">
+
+
+
+        <div class="card_container">
+
+            <div class="advenShow">
+                <form class="adven_form" action="/Dm/{{DmId}}/adventures" method="POST" id="form1">
+                    <div class="add adven">
+                        <div class="form adven">
+                            <label for="name">Name:</label>
+                            <input type="text" class="input" name="name" value="{{adventure.name}}">
+                        </div>
+                        <div class="form adven">
+                            <label for="description">Description:</label>
+                            <input type="text" class="input" name="description" value="{{adventure.description}}">
+                        </div>
+
+                        <input type="submit" class="btn submitAdven" value="Edit {{adventure.name}}">
+                    </div>
+                </form>
+
+                <div class="btn_container adven">
+                    <a href="/Dm/{{DmId}}/adventures" class="btn AdvenBack">
+                        <span class="btn_text">Back to Adventures</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
