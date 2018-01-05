@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
 const DungeonMaster = require('./models/Dm')
+const Adventure = require('./models/Adventure')
 
 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -22,7 +23,7 @@ mongoose.connection.on('error', (error) => {
 })
 
 DungeonMaster.remove({}).then(() => {
-    const JasenBaker = new DungeonMaster(
+    const jasenBaker = new DungeonMaster(
         {
             firstName: 'Jasen',
             lastName: 'Baker',
@@ -33,9 +34,32 @@ DungeonMaster.remove({}).then(() => {
             gamesRan: 13
         }
     )
-    return JasenBaker.save()
+
+    const minesPhandelver = new Adventure(
+        {
+            name: 'Lost Mines of Phandelver',
+            descriptions: `Lost Mine of Phandelver is an adventure for four to five
+            characters of 1st level. During the course of the adventure,
+            the characters will advance to 5th level. The adventure
+            is set a short distance from the city of Neverwinter in the
+            Sword Coast region of the Forgotten Realms setting. The
+            Sword Coast is part of the North-a vast realm of free
+            settlements surrounded by wilderness and adventure.`
+        }
+    )
+    const askDirections = new Adventure(
+        {
+            name: 'Never Ask Directions',
+            description: `When the party stops to ask directions of a reclusive halfling, 
+            they find him eagar to point out the way. Unfortunately, 
+            the path he directs them on is straigt towars a troop of 
+            bandits with who the halfling intends to settle an old score.`
+        }
+    )
+    jasenBaker.adventures.push(minesPhandelver, askDirections)
+    return jasenBaker.save()
 }).then(() => {
-    const ChrisCrosby = new DungeonMaster(
+    const chrisCrosby = new DungeonMaster(
         {
             firstName: 'Chris',
             lastName: 'Crosby',
@@ -45,7 +69,28 @@ DungeonMaster.remove({}).then(() => {
             gamesRan: 20
         }
     )
-    return ChrisCrosby.save()
+    const forgeFury = new Adventure (
+        {
+            name: 'The Forge of Fury',
+            description: `The characters come to the Stone Tooth in search of
+            a reputed cache of Durgeddin's superior blades and find
+            the stronghold inhabited by dangerous monsters.`
+
+        }
+    )
+    const fistTorm = new Adventure (
+        {
+            name: 'The Fist of Torm',
+            description: ` After a heavy storm at sea, the ship the PC’s are on 
+            have to put into a safe harbor. Unfortunately that harbor was Daggerford, 
+            a town under the control of the Brotherhood of Torm and locked down. 
+            They run afoul of the sinister Zackam Laughingshadow, 
+            but receive help from the unassuming halfling Arin Rumble. 
+            She asks them for help in exchange for showing them the way out of town`
+        }
+    )
+    chrisCrosby.adventures.push(forgeFury, fistTorm)
+    return chrisCrosby.save()
 }).catch((err) => {
     console.log('ERROR SAVING SEED DATA!!')
     console.log(err)
