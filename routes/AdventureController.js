@@ -9,7 +9,7 @@ router.get('/', (req, res)=>{
 
     DungeonMaster.findById(DmId)
     .then((Dm)=>{
-        res.render('Adventures/index'. {
+        res.render('Adventures/index', {
             adventures: Dm.adventures,
             DmId: Dm._id,
             title: `${Dm.username}'s Adventures`
