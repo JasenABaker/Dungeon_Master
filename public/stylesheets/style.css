@@ -7,7 +7,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #E5E5E5;
+  /* background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/goblins.png') right no-repeat; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ 
 
 }
 
@@ -17,10 +19,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: row;
-  background-color: #E5E5E5;
-  
-
-}
+  }
 .main{
   
   display: flex;
@@ -29,6 +28,7 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
+  
   /* border: 5px solid green; */
 
 }

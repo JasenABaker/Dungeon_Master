@@ -66,6 +66,22 @@ router.get('/:AdvenId', (req,res) => {
     })
 })
 
+router.get('/:AdvenId/edit', (req,res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+
+    DungeonMaster.findById(DmId)
+    .then((Dm) =>{
+        const adventure = Dm.adventures.id(AdvenId)
+
+        res.render('adventures/edit', {
+            DmId,
+            adventure,
+            title: `${adventure.nam}`
+        })
+    })
+})
+
 
 
 
