@@ -4,6 +4,7 @@ mongoose.Promise = global.Promise
 
 const DungeonMaster = require('./models/Dm')
 const Adventure = require('./models/Adventure')
+const Player = require('./models/Player')
 
 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -21,6 +22,74 @@ mongoose.connection.on('error', (error) => {
     `)
     process.exit(-1)
 })
+
+const baraghVrinn = new Player ({
+    characterName:'Baragh Vrinn',
+    name: 'Jasen Baker',
+    class:'Bard',
+    level: 4,
+    race: 'Dark Elf',
+    armorClass: 15,
+    hitPoints: 29,
+    photoUrl: 'https://i.pinimg.com/736x/d3/93/0f/d3930fab7c666b105c3456bce18827a2--drow-bard-character-concept.jpg'
+
+})
+const chernobob = new Player ({
+    characterName:'Chernobob',
+    name: 'Tim Turnquist',
+    class:'Ranger',
+    level: 4,
+    race: 'Dragonborn',
+    armorClass: 16,
+    hitPoints: 38,
+    photoUrl:'https://i.pinimg.com/736x/b1/fa/13/b1fa137c87f15c2ee4fa4e9b3449984e--sci-fi-fantasy-fantasy-images.jpg'
+
+})
+const sten = new Player({
+    characterName:'Sten the Giant',
+    name: 'Bob Hoskins',
+    class:'Fighter',
+    level: 1,
+    race: 'Human',
+    armorClass: 18,
+    hitPoints: 30,
+    photoUrl:'https://i.pinimg.com/736x/81/a0/42/81a042f4a84125bc5aad1f8b3a4c5dde--dd-paladin-fantasy-paladin.jpg'
+})
+
+const lothoHarfoot = new Player ({
+    characterName:'Lotho Harfoot',
+    name: 'Ted Tuner',
+    class:'Rouge',
+    level: 1,
+    race: 'Halfling',
+    armorClass: 14,
+    hitPoints: 9,
+    photoUrl: 'https://i.pinimg.com/736x/38/29/c2/3829c288642a8291a6008f7c2a088aa0--character-concept-character-art.jpg'
+})
+
+const therfalas = new Player({
+    characterName:'Therfalas',
+    name: 'Chris Crosby',
+    class:'Wizard',
+    level: 4,
+    race: 'High Elf',
+    armorClass: 12,
+    hitPoints: 25,
+    photoUrl:'https://i.pinimg.com/736x/c3/2f/49/c32f49307bdebb2e9bb0e8de2635535f.jpg'
+
+})
+
+const malphas = new Player ({
+    characterName:'Malphas Scarvenom',
+    name: 'James Leigh',
+    class:'Paladin',
+    level: 4,
+    race: 'Tiefling',
+    armorClass: 18,
+    hitPoints: 39,
+    photoUrl: 'https://i.pinimg.com/originals/b4/42/7a/b4427a40bb17a7d94493a3dec0f20615.jpg'
+})
+
 
 DungeonMaster.remove({}).then(() => {
     const jasenBaker = new DungeonMaster (
@@ -46,6 +115,7 @@ DungeonMaster.remove({}).then(() => {
             settlements surrounded by wilderness and adventure.`
         })
 
+        minesPhandelver.players.push(therfalas, chernobob, sten)
 
     const askDirections = new Adventure({
             name: 'Never Ask Directions',
@@ -54,7 +124,8 @@ DungeonMaster.remove({}).then(() => {
             the path he directs them on is straigt towars a troop of 
             bandits with who the halfling intends to settle an old score.`
         })
-    
+
+
     jasenBaker.adventures.push(minesPhandelver, askDirections)    
     
     return jasenBaker.save()
@@ -78,6 +149,7 @@ DungeonMaster.remove({}).then(() => {
 
         }
     )
+    forgeFury.players.push(baraghVrinn,lothoHarfoot, malphas)
     const fistTorm = new Adventure (
         {
             name: 'The Fist of Torm',
