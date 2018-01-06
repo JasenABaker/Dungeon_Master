@@ -106,6 +106,33 @@ router.post('/', (req, res)=>{
     })
 })
 
+router.put('/', (req, res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const PlayerId = req.params.PlayerId
+    const updatedPlayer = req.body
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        const adventure = Dm.adventures.id(AdvenId)
+        
+
+        adventure.players.id(PlayerId).remove()
+        return Dm.save()
+    })
+    .then((Dm)=>{
+        adventure.players.push(updatedPlayer)
+        return Dm.save()
+    })
+    .then (()=>{
+        res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/players`)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
+
 
 
 
