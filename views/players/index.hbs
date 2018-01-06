@@ -1,0 +1,40 @@
+<div class="Dm_main">
+    <div class="index_header show adven">
+        <h1>{{adventure.name}}</h1>
+        <h2 class="subject">{{title}}</h2>
+    </div>
+    <div class="container player">
+        {{#each players}}
+        <div class="player_card">
+            <div class="name char">{{this.characterName}}</div>
+            <div class="player_icon">
+                <div class="photoLvl">
+                    <div class="img char">
+                        <img src="{{this.photoUrl}}" alt="{{this.characterName}}">
+                    </div>
+                    <div>{{this.level}}</div>
+                </div>
+                <div class="classRaceAcHp">
+                    <div class="classRace">
+                        <div>{{this.class}}</div>
+                        <div>{{this.race}}</div>
+                    </div>
+                    <div class="AcHp">
+                        <div>{{this.armorClass}}</div>
+                        <div>{{this.hitPoints}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="name player">{{this.name}}</div>
+            <div class="btn_container player">
+                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/edit" class="btn playerEdit">
+                    <span class="btn_text">Edit {{this.characterName}}</span>
+                </a>
+                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/delete" class="btn playerDelete">
+                    <span class="btn_text">Delete {{this.characterName}}</span>
+                </a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

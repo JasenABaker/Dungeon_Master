@@ -80,7 +80,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+}
+.container.player {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
 }
 .itemView{
@@ -200,6 +206,57 @@ footer {
   justify-content: center;
 }
 
+.player_card{
+  height: 60%;
+  width: 16.6%;
+  background-color: #F2EFE9;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33);
+  border: #262021 2px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player_icon{
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.photoLvl {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.classRaceAcHp{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.classRace{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.AcHp {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
 
 
@@ -337,6 +394,12 @@ img{
 .image_show {
   grid-area: 2/2/9/6;
   
+}
+
+.img.char{
+  height: 80%;
+  width: 110%;
+  border: #262021 2px solid;
 }
 
 
