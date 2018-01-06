@@ -16,6 +16,8 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: row;
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/nothic.png') right no-repeat;
+  background-size: 800px;
   }
 .main{
   
@@ -434,19 +436,6 @@ img{
   height: 100%;
   width: 100%;
 }
-.monst{
-  padding-right: 20%;
-  padding-bottom: 20%;
-  height: 40%;
-  width: 60%;
-  z-index: 1;
-  align-self: center;
-}
-
-.monst img{
-  height: 100%;
-  width: 100%;
-}
 
 .image_show {
   grid-area: 2/2/9/6;
@@ -522,11 +511,9 @@ input {
   margin: 10px 50px 50px 100px;
   font-size: 18px;
 }
-.color, .monst {
-  position: absolute;
-}
+
 .color{
-  background-color: #ED4C43;
+  background-color: rgba(254, 27, 47,.5);
   height: 100%;
   width: 50%;
   align-self: flex-end;
