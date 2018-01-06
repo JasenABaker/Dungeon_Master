@@ -11,6 +11,7 @@ const methodOverride = require('method-override')
 const indexController = require('./routes/indexController')
 const DmController = require('./routes/DmController')
 const AdventureController = require('./routes/AdventureController')
+const PlayerController = require('./routes/PlayerController')
 const users = require('./routes/users');
 
 const app = express();
@@ -49,6 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexController)
 app.use('/Dm', DmController)
 app.use('/Dm/:DmId/Adventures', AdventureController)
+app.use('/Dm/:DmId/Adventures/:AdvenId/Players', PlayerController)
 app.use('/users', users);
 
 // catch 404 and forward to error handler
