@@ -1,6 +1,7 @@
 <div class="Dm_main">
     <div class="index_header show adven">
-        <h1>{{title}}</h1>
+        <h1>Edit:</h1>
+        <h2 class="subject">{{title}}</h2>
     </div>
     <div class="container adven">
 
@@ -10,7 +11,7 @@
 
             <div class="advenShow">
                 <form class="adven_form" action="/Dm/{{DmId}}/adventures" method="POST" id="form1">
-                    <div class="add adven">
+                    <div class="add adven edit">
                         <div class="form adven">
                             <label for="name">Name:</label>
                             <input type="text" class="input" name="name" value="{{adventure.name}}">

@@ -179,6 +179,10 @@ footer {
   justify-content: space-around;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33)
 }
+.add.adven.edit {
+  background-color: #EDAE49;
+
+}
 
 .dm_info{
   grid-area: 2/7/10/20;
