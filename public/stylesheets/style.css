@@ -46,6 +46,12 @@ body {
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/barb.png') right no-repeat;
   background-size: 800px;
 }
+.header{
+  width: 100%;
+  height: 30vh;
+  display: flex;
+
+}
 .index_header{
   margin: 30px;
   display: flex;
@@ -315,6 +321,17 @@ footer {
 .btn_container.adven{
   height: 5%;
 }
+.btn_container.head{
+  height: 40%;
+  margin-left: auto;
+  margin-right: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26), 0 3px 6px rgba(0, 0, 0, 0.33);
+}
+.btn.player{
+  height: 100px;
+  width: 100px;
+  align-items: flex-end;
+}
 
 .btn.DmEdit{
   background-color: #30638E;
@@ -356,6 +373,9 @@ footer {
   color: #E5E5E5;
   font-size: 18px
 }
+.btn_text.player{
+  font-size: 16px;
+}
 
 
 
@@ -388,6 +408,13 @@ footer {
 .btn.AdvenEncounter:hover {
   background-color: #436D2C;
 }
+.btn.player.add:hover {
+  background-color: #30638E;;
+}
+.btn.player.back:hover {
+  background-color: #436D2C;
+}
+
 
 
 
@@ -550,7 +577,17 @@ input {
 .numberBlock{
   background-color: lightgray;
   border: 1px black solid;
+  font-size: 20px;
 }
+
+.stat{
+  font-size: 20px;
+}
+.statlabel{
+  color: #D1495B;
+  font-size: 12px;
+}
+
 
 
 

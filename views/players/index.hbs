@@ -1,14 +1,22 @@
 <div class="Dm_main">
+    <div class="header">
     <div class="index_header show adven">
         <h1>{{adventure.name}}</h1>
         <h2 class="subject">{{title}}</h2>
+        </div>
+        <div class="btn_container head">
+            <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Players/" class="btn player add"><span class="btn_text player">Add Player</span></a>
+            <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}" class="btn player back"><span class="btn_text player">Back to {{adventure.name}}</span></a>
+            <a href="/Dm/{{../DmId}}" class="btn player home"><span class="btn_text player">Back to DMs</span></a>
+        </div>
+    
     </div>
     <div class="container player">
         {{#each players}}
         <div class="player_card">
             <div class="top">
                 <div class="name char">{{this.characterName}}</div>
-                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/delete" class="a playerDelete">
+                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Players/{{this.id}}/delete" class="a playerDelete">
                     <span class="X_text">X</span>
                 </a>
             </div>
@@ -32,7 +40,7 @@
             </div>
             <div class="bottom"></div>
                 <div class="name player">{{this.name}}</div>
-                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/edit" class="a playerEdit">
+                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Players/{{this.id}}/edit" class="a playerEdit">
                     <span class="edit_text">Edit {{this.characterName}}</span>
                 </a>
             </div>
