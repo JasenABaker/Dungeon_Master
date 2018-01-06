@@ -241,6 +241,10 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
+.player_card.new{
+  width: 30%;
+  height: 100%;
+}
 
 .player_icon{
   height: 90%;
@@ -414,6 +418,9 @@ footer {
 .btn.player.back:hover {
   background-color: #436D2C;
 }
+.btn.submit.new:hover {
+  background-color: #8E5572
+}
 
 
 
@@ -482,6 +489,19 @@ input {
   width: 95%;
   display: flex;
   flex-direction: column;
+}
+.form.player{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.formLabel{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 

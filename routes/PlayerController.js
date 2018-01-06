@@ -16,6 +16,7 @@ router.get('/', (req, res) =>{
 
         res.render('players/index', {
             DmId,
+            AdvenId,
             adventure,
             players,
             title: 'Players'
@@ -29,9 +30,10 @@ router.get('/new', (req, res) =>{
 
     DungeonMaster.findById(DmId)
     .then((Dm)=>{
-        const adventure = Dm.adventure.id(AdvenId)
+        const adventure = Dm.adventures.id(AdvenId)
         res.render('players/new', {
             DmId,
+            AdvenId,
             adventure,
             title: 'Add Player to:'
         })
@@ -48,7 +50,7 @@ router.get('/:PlayerId/delete', (req, res)=>{
 
     DungeonMaster.findById(DmId)
     .then((Dm)=>{
-        const adventure = Dm.adventure.id(AdvenId)
+        const adventure = Dm.adventures.id(AdvenId)
         adventure.players.id(PlayerId).remove()
 
         return Dm.save()
@@ -69,7 +71,7 @@ router.post('/', (rea, res)=>{
 
     DungeonMaster.findById(DmId)
     .then((Dm)=>{
-        const adventure = Dm.adventure.id(AdvenId)
+        const adventure = Dm.adventures.id(AdvenId)
         adventure.players.push(newPlayer)
 
         return Dm.save()

@@ -1,0 +1,36 @@
+<div class="Dm_main">
+    <div class="header">
+        <div class="index_header show adven">
+            <h1>{{title}}</h1>
+            <h2 class="subject">{{adventure.name}}</h2>
+        </div>
+        <div class="btn_container head">
+            <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Players/" class="btn player add">
+                <span class="btn_text player">Back to Players</span>
+            </a>
+            <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}" class="btn player back">
+                <span class="btn_text player">Back to {{adventure.name}}</span>
+            </a>
+            <a href="/Dm/{{../DmId}}" class="btn player home">
+                <span class="btn_text player">Back to DMs</span>
+            </a>
+        </div>
+
+    </div>
+    <div class="container player">
+        <div class="player_card new">
+            <form class="form player" action="/Dm/{{DmId}}/adventure/{{adventure._id}}/players" method="POST">
+            <div class="formLabel"><label for="characterName" class="label player new">Charcater Name:</label><input type="text" name="characterName"></div>
+            <div class="formLabel"><label for="name" class="label player new">Player Name:</label><input type="text" name="name"></div>
+            <div class="formLabel"><label for="class" class="label player new">Class:</label><input type="text" name="class"></div>
+            <div class="formLabel"><label for="level" class="label player new">Level:</label><input type="text" name="level"></div>
+            <div class="formLabel"><label for="race" class="label player new">Race:</label><input type="text" name="race"></div>
+            <div class="formLabel"><label for="armorClass" class="label player new">Armor Class:</label><input type="text" name="armorClass"></div>
+            <div class="formLabel"><label for="hitPoints" class="label player new">Hit Points:</label><input type="text" name="hitPoints"></div>
+            <div class="formLabel"><label for="photoUrl" class="label player new">Character Portrait:</label><input type="text" name="photoUrl"></div>
+            <div class="btn_container"><input type="submit" class="btn submit new" value="Add Player"></div>
+            </form>
+
+        </div>
+    </div>
+</div>
