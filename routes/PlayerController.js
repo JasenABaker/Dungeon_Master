@@ -41,6 +41,50 @@ router.get('/new', (req, res) =>{
     })
 })
 
+router.get('/:PlayerId/delete', (req, res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const PlayerId = req.params.PlayerId
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        const adventure = Dm.adventure.id(AdvenId)
+        adventure.players.id(PlayerId).remove()
+
+        return Dm.save()
+    })
+    .then(()=>{
+        res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/players`)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+    
+})
+
+router.post('/', (rea, res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const newPlayer = req.body
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        const adventure = Dm.adventure.id(AdvenId)
+        adventure.players.push(newPlayer)
+
+        return Dm.save()
+    })
+    .then(()=>{
+        res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/players`)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
+
+
+
 
 
 
