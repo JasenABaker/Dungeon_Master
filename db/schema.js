@@ -18,7 +18,7 @@ const PlayerSchema = new Schema (
             type: String,
             required: [true, 'Needs a class']
         },
-        level:{
+        level: {
             type: Number,
             required: [true, 'Need a level']
         },
@@ -30,7 +30,7 @@ const PlayerSchema = new Schema (
             type: Number,
             required: [true, 'Need and armor class']
         },
-        hitPoints:{
+        hitPoints: {
             type: Number,
             required: [true, 'Needs hit points']
         },
@@ -120,5 +120,6 @@ const DungeonMasterSchema = new Schema(
 
 module.exports = {
     DungeonMasterSchema,
-    AdventureSchema
+    AdventureSchema,
+    PlayerSchema
 }
