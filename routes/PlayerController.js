@@ -32,6 +32,7 @@ router.get('/new', (req, res) => {
         .then((Dm) => {
             const adventure = Dm.adventures.id(AdvenId)
             res.render('players/new', {
+                Dm,
                 DmId,
                 AdvenId,
                 adventure,
