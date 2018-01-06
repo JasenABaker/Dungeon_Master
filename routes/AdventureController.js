@@ -99,7 +99,7 @@ router.get('/:AdvenId/delete', (req, res)=>{
     })
 })
 
-router.put('/', (req, res)=>{
+router.put('/:AdvenId', (req, res)=>{
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
     const updatedAdven = req.body

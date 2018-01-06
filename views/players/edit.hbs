@@ -1,0 +1,62 @@
+<div class="Dm_main">
+    <div class="header">
+        <div class="index_header show adven">
+            <h1>{{title}}</h1>
+            <h2 class="subject">{{player.characterName}}</h2>
+        </div>
+        <div class="btn_container head">
+            <a href="/Dm/{{DmId}}/Adventures/{{adventure._id}}/players" class="btn player add">
+                <span class="btn_text player">Back to Players</span>
+            </a>
+            <a href="/Dm/{{DmId}}/Adventures/{{adventure._id}}" class="btn player back">
+                <span class="btn_text player">Back to {{adventure.name}}</span>
+            </a>
+            <a href="/Dm/{{../DmId}}" class="btn player home">
+                <span class="btn_text player">Back to DMs</span>
+            </a>
+        </div>
+
+    </div>
+    <div class="container player">
+        <div class="player_card new">
+            <form class="form player" action="/Dm/{{DmId}}/adventures/{{adventure._id}}/players/{{player._id}}?_method=PUT" method="POST">
+                <div class="formLabel">
+                    <label for="characterName" class="label player new">Charcater Name:</label>
+                    <input type="text" name="characterName" value="{{player.characterName}}">
+                </div>
+                <div class="formLabel">
+                    <label for="name" class="label player new">Player Name:</label>
+                    <input type="text" name="name" value="{{player.name}}">
+                </div>
+                <div class="formLabel">
+                    <label for="class" class="label player new">Class:</label>
+                    <input type="text" name="class" value="{{player.class}}">
+                </div>
+                <div class="formLabel">
+                    <label for="level" class="label player new">Level:</label>
+                    <input type="number" name="level" value="{{player.level}}">
+                </div>
+                <div class="formLabel">
+                    <label for="race" class="label player new">Race:</label>
+                    <input type="text" name="race" value="{{player.race}}">
+                </div>
+                <div class="formLabel">
+                    <label for="armorClass" class="label player new">Armor Class:</label>
+                    <input type="number" name="armorClass" value="{{player.armorClass}}">
+                </div>
+                <div class="formLabel">
+                    <label for="hitPoints" class="label player new">Hit Points:</label>
+                    <input type="number" name="hitPoints" value="{{player.hitPoints}}">
+                </div>
+                <div class="formLabel">
+                    <label for="photoUrl" class="label player new">Character Portrait:</label>
+                    <input type="text" name="photoUrl" value="{{player.photoUrl}}">
+                </div>
+                <div class="btn_container">
+                    <input type="submit" class="btn submit new" value="Edit {{player.characterName}}">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
