@@ -64,7 +64,7 @@ router.get('/:PlayerId/delete', (req, res)=>{
     
 })
 
-router.post('/', (rea, res)=>{
+router.post('/', (req, res)=>{
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
     const newPlayer = req.body
