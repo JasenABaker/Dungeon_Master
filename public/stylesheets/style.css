@@ -61,6 +61,10 @@ body {
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/human.png') right no-repeat;
   background-size: 800px;
 }
+.Dm_main.adven.edit {
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/teifling.png') right no-repeat;
+  background-size: 800px;
+}
 .header{
   width: 100%;
   height: 30vh;
