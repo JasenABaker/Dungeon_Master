@@ -3,6 +3,46 @@ const Schema = mongoose.Schema
 
 mongoose.Promise = global.Promise
 
+const PlayerSchema = new Schema (
+    {
+        characterName: {
+            type: String,
+            required: [true, 'Every adventurer needs a name'],
+            unique: true,
+            sparse: true
+        },
+        name: {
+            type: String,
+        },
+        class: {
+            type: String,
+            required: [true, 'Needs a class']
+        },
+        level:{
+            type: Number,
+            required: [true, 'Need a level']
+        },
+        race: {
+            type: String,
+            required: [true, "Don't be racist, pick a race"]
+        },
+        armorClass: {
+            type: Number,
+            required: [true, 'Need and armor class']
+        },
+        hitPoints:{
+            type: Number,
+            required: [true, 'Needs hit points']
+        },
+        photoUrl: {
+            type: String,
+            default: 'http://www.tribality.com/wp-content/uploads/2015/02/halfling_bard-214x300.jpg'
+        }
+    },
+    {
+        timestamps:{}
+    }
+)
 
 
 const AdventureSchema = new Schema(
@@ -17,7 +57,7 @@ const AdventureSchema = new Schema(
             required: false,
             default: 'Dungeons and Dragons Adventure'
         },
-        players: [],
+        players: [PlayerSchema],
         encounters: [],
     },
     {
