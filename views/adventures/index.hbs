@@ -1,16 +1,24 @@
-<div class="Dm_main">
+<div class="Dm_main adven">
+    <div class="header">
     <div class="index_header show adven">
         <h1>{{Dm.username}}</h1>
         <h2 class="subject">{{title}}</h2>
+    </div>
+    <div class="btn_container head">
+         <a href="/" class="btn player home">
+                <span class="btn_text player">Home</span>
+            </a>
+         <a href="/Dm/{{DmId}}" class="btn player home">
+                <span class="btn_text player">Back to {{Dm.username}}</span>
+            </a>
+
+    </div>
     </div>
     <div class="container adven">
 
         <div class="btn_container adven">
             <a href="/Dm/{{DmId}}/adventures/new" class="btn AdvenNew">
                 <span class="btn_text">New Adventure</span>
-            </a>
-            <a href="/Dm/{{DmId}}" class="btn AdvenBack">
-                <span class="btn_text">Back to {{Dm.username}}</span>
             </a>
         </div>
 
