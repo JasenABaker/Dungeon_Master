@@ -6,35 +6,37 @@
     <div class="container player">
         {{#each players}}
         <div class="player_card">
-            <div class="name char">{{this.characterName}}</div>
+            <div class="top">
+                <div class="name char">{{this.characterName}}</div>
+                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/delete" class="a playerDelete">
+                    <span class="X_text">X</span>
+                </a>
+            </div>
             <div class="player_icon">
                 <div class="photoLvl">
                     <div class="img char">
                         <img src="{{this.photoUrl}}" alt="{{this.characterName}}">
                     </div>
-                    <div>{{this.level}}</div>
+                    <div class="numberBlock"><span class="statlabel">LVL: </span>{{this.level}}</div>
                 </div>
                 <div class="classRaceAcHp">
                     <div class="classRace">
-                        <div>{{this.class}}</div>
-                        <div>{{this.race}}</div>
+                        <div class="stat"><div class="statlabel">Class</div>{{this.class}}</div>
+                        <div class="stat"><div class="statlabel">Race</div>{{this.race}}</div>
                     </div>
                     <div class="AcHp">
-                        <div>{{this.armorClass}}</div>
-                        <div>{{this.hitPoints}}</div>
+                        <div class="numberBlock"><span class="statlabel">AC: </span>{{this.armorClass}}</div>
+                        <div class="numberBlock"><span class="statlabel">HP: </span>{{this.hitPoints}}</div>
                     </div>
                 </div>
             </div>
-            <div class="name player">{{this.name}}</div>
-            <div class="btn_container player">
-                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/edit" class="btn playerEdit">
-                    <span class="btn_text">Edit {{this.characterName}}</span>
-                </a>
-                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/delete" class="btn playerDelete">
-                    <span class="btn_text">Delete {{this.characterName}}</span>
+            <div class="bottom"></div>
+                <div class="name player">{{this.name}}</div>
+                <a href="/Dm/{{../DmId}}/Adventures/{{../AdvenId}}/Playes/{{this.id}}/edit" class="a playerEdit">
+                    <span class="edit_text">Edit {{this.characterName}}</span>
                 </a>
             </div>
-        </div>
         {{/each}}
+        </div>
     </div>
-</div>
+    

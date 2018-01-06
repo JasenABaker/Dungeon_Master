@@ -86,7 +86,7 @@ body {
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  
 
 }
 .itemView{
@@ -256,6 +256,11 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 
@@ -511,6 +516,27 @@ input {
   text-align: center;
   font-size: 24px;
 }
+.a {
+  text-decoration: none;
+}
+.playerDelete {
+  font-size: 20px;
+  font-weight: 700;
+  color: #D1495B
+}
+
+.name.char{
+  font-size: 24px;
+}
+
+.numberBlock{
+  background-color: lightgray;
+  border: 1px black solid;
+}
+
+
+
+
 
 
 
