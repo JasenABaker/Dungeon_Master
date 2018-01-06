@@ -7,10 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #E5E5E5;
-  /* background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/goblins.png') right no-repeat; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
- 
-
 }
 
 /* top level page stuff */
@@ -31,6 +28,23 @@ body {
   
   /* border: 5px solid green; */
 
+}
+.Dm_main{
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/fighter.png') right no-repeat;
+  background-size: 800px;
+}
+
+.Dm_mainPage{
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/bard.png') right no-repeat;
+  background-size: 800px;
+}
+.Dm_mainPage.new{
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/bard.png') right no-repeat;
+  background-size: 800px;
+}
+.Dm_mainPage.edit{
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/barb.png') right no-repeat;
+  background-size: 800px;
 }
 .index_header{
   margin: 30px;
@@ -174,6 +188,10 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.master.add.edit{
+  background-color: #7AC74F;
 }
 .add.adven{
   background-color: #7AC74F;
