@@ -43,6 +43,28 @@ router.get('/new', (req, res) =>{
     })
 })
 
+router.get('/:PlayerId/edit', (req ,res)=> {
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const PlayerId = req.params.PlayerId
+
+    DungeonMaster.findById(DmId)
+    .them((Dm)=>{
+        const adventure = Dm.adventures.id(AdvenId)
+        const player = adventure.players.id(PlayerId)
+        req.render('players/edit', {
+            DmId,
+            adventure,
+            player,
+            title: 'Edit'
+        })
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+
+})
+
 router.get('/:PlayerId/delete', (req, res)=>{
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
