@@ -56,6 +56,7 @@ router.get('/:AdvenId', (req,res) => {
         const adventure = Dm.adventures.id(AdvenId)
         
         res.render('adventures/show', {
+            Dm,
             DmId,
             adventure,
             title: `${adventure.name}`

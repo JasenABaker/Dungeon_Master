@@ -52,6 +52,15 @@ body {
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/cleric.png') right no-repeat;
   background-size: 800px;
 }
+
+.Dm_main.adven.new {
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/dwarf.png') right no-repeat;
+  background-size: 800px;
+}
+.Dm_main.adven.show {
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/human.png') right no-repeat;
+  background-size: 800px;
+}
 .header{
   width: 100%;
   height: 30vh;
@@ -135,7 +144,7 @@ body {
   justify-content: space-between;
 }
 .card_container {
-  height: 85%;
+  height: 70vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -172,7 +181,7 @@ footer {
   border: #262021 5px solid;
 }
 .advenShow{
-  height: 75%;
+  height: 85%;
   width: 75%;
   background-color: #B0ADAE;
   display: flex;
