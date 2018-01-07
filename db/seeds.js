@@ -6,6 +6,7 @@ const DungeonMaster = require('./models/Dm')
 const Adventure = require('./models/Adventure')
 const Player = require('./models/Player')
 const Encounter = require('./models/Encounter')
+const Monster = require('./models/Monster')
 
 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -24,9 +25,75 @@ mongoose.connection.on('error', (error) => {
     process.exit(-1)
 })
 
-const klargCave = new Encounter ({
+const goblin = new Monster ({
+    name: 'Goblin',
+    xp: 50,
+    armorClass: 15,
+    hitPoints: 7,
+    speed: 30,
+    stats: {
+        str: 8,
+        dex: 14,
+        con: 10,
+        int: 10,
+        wis: 8,
+        cha: 8,
+    },
+    skills:'Stealth +6',
+    senses: 'Darkvision 60 ft., Passive Perception 9',
+    features: [`Nimble Escape. The goblin can take the Disengage 
+    or Hide action as a bonus action on each of its turns.`],
+    actions:[`Scimitar. Melee Weapon Attack: +4 to hit, reach 5 ft., 
+    one target. Hit: 5 (1d6 + 2) slashing damage.` , `Shortbow. Ranged 
+    Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5
+    (1d6 + 2) piercing damage.`],
+    description:`Goblins are small, black-hearted humanoids that lair 
+    in despoiled dungeons and other dismal settings. Individually 
+    weak, they gather in large numbers to torment other creatures.`,
+    photoUrl: 'https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/351/1000/1000/636252777818652432.jpeg'
+})
+
+const bugBear = new Monster ({
+    name: 'Bugbear',
+    xp: 200,
+    armorClass: 16,
+    hitPoints: 27,
+    speed: 30,
+    stats: {
+        str: 15,
+        dex: 14,
+        con: 13,
+        int: 8,
+        wis: 11,
+        cha: 9,
+    },
+    skills:'Stealth +6, Survival +2',
+    senses: 'Darkvision 60 ft., Passive Perception 10',
+    features: [`Brute. A melee weapon deals one extra die of its damage 
+    when the bugbear hits with it (included in the attack).`,`Surprise Attack. 
+    If the bugbear surprises a creature and hits it with an attack during 
+    the first round of combat, the target takes an extra 7 (2d6) 
+    damage from the attack.`],
+    actions:[`Morningstar. Melee Weapon Attack: +4 to hit, reach 5 ft., 
+    one target. Hit: 11 (2d8 + 2) piercing damage.` , `Javelin. Melee or Ranged 
+    Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 
+    9 (2d6 + 2) piercing damage in melee or 5 (1d6 + 2) piercing damage at range.`],
+    description:`Bugbears are hairy goblinoids born for battle and mayhem. They 
+    survive by raiding and hunting, but are fond of setting ambushes and fleeing 
+    when outmatched.`,
+    photoUrl: 'https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/221/1000/1000/636252765234633232.jpeg'
+})
+
+
+
+
+
+
+
+
+const klargCave = new Encounter({
     location: "Klarg's Cave",
-    description:`Sacks and crates of looted provisions are piled up in the
+    description: `Sacks and crates of looted provisions are piled up in the
     south end of this large cave_ To the west, the floor slopes
     toward a narrow opening that descends into darkness. A
     larger opening leads north down a set of natural stone steps,
@@ -34,7 +101,7 @@ const klargCave = new Encounter ({
     of the cavern, the coals ofa large fire smolder.`
 })
 
-const goblinAmbush = new Encounter ({
+const goblinAmbush = new Encounter({
     location: 'Goblin Ambush',
     description: `You've been on the Triboar Trail for about half a day. As you
     come around a bend, you spot two dead horses sprawled
@@ -46,10 +113,10 @@ const goblinAmbush = new Encounter ({
 
 
 
-const baraghVrinn = new Player ({
-    characterName:'Baragh Vrinn',
+const baraghVrinn = new Player({
+    characterName: 'Baragh Vrinn',
     name: 'Jasen Baker',
-    class:'Bard',
+    class: 'Bard',
     level: 4,
     race: 'Dark Elf',
     armorClass: 15,
@@ -57,32 +124,32 @@ const baraghVrinn = new Player ({
     photoUrl: 'https://i.pinimg.com/736x/d3/93/0f/d3930fab7c666b105c3456bce18827a2--drow-bard-character-concept.jpg'
 
 })
-const chernobob = new Player ({
-    characterName:'Chernobob',
+const chernobob = new Player({
+    characterName: 'Chernobob',
     name: 'Tim Turnquist',
-    class:'Ranger',
+    class: 'Ranger',
     level: 4,
     race: 'Dragonborn',
     armorClass: 16,
     hitPoints: 38,
-    photoUrl:'https://i.pinimg.com/736x/b1/fa/13/b1fa137c87f15c2ee4fa4e9b3449984e--sci-fi-fantasy-fantasy-images.jpg'
+    photoUrl: 'https://i.pinimg.com/736x/b1/fa/13/b1fa137c87f15c2ee4fa4e9b3449984e--sci-fi-fantasy-fantasy-images.jpg'
 
 })
 const sten = new Player({
-    characterName:'Sten the Giant',
+    characterName: 'Sten the Giant',
     name: 'Bob Hoskins',
-    class:'Fighter',
+    class: 'Fighter',
     level: 1,
     race: 'Human',
     armorClass: 18,
     hitPoints: 30,
-    photoUrl:'https://i.pinimg.com/736x/81/a0/42/81a042f4a84125bc5aad1f8b3a4c5dde--dd-paladin-fantasy-paladin.jpg'
+    photoUrl: 'https://i.pinimg.com/736x/81/a0/42/81a042f4a84125bc5aad1f8b3a4c5dde--dd-paladin-fantasy-paladin.jpg'
 })
 
-const lothoHarfoot = new Player ({
-    characterName:'Lotho Harfoot',
+const lothoHarfoot = new Player({
+    characterName: 'Lotho Harfoot',
     name: 'Ted Tuner',
-    class:'Rouge',
+    class: 'Rouge',
     level: 1,
     race: 'Halfling',
     armorClass: 14,
@@ -91,21 +158,21 @@ const lothoHarfoot = new Player ({
 })
 
 const therfalas = new Player({
-    characterName:'Therfalas',
+    characterName: 'Therfalas',
     name: 'Chris Crosby',
-    class:'Wizard',
+    class: 'Wizard',
     level: 4,
     race: 'High Elf',
     armorClass: 12,
     hitPoints: 25,
-    photoUrl:'https://i.pinimg.com/736x/c3/2f/49/c32f49307bdebb2e9bb0e8de2635535f.jpg'
+    photoUrl: 'https://i.pinimg.com/736x/c3/2f/49/c32f49307bdebb2e9bb0e8de2635535f.jpg'
 
 })
 
-const malphas = new Player ({
-    characterName:'Malphas Scarvenom',
+const malphas = new Player({
+    characterName: 'Malphas Scarvenom',
     name: 'James Leigh',
-    class:'Paladin',
+    class: 'Paladin',
     level: 4,
     race: 'Tiefling',
     armorClass: 18,
@@ -115,7 +182,10 @@ const malphas = new Player ({
 
 
 DungeonMaster.remove({}).then(() => {
-    const jasenBaker = new DungeonMaster (
+
+    goblinAmbush.monsters.push(goblin, goblin)
+
+    const jasenBaker = new DungeonMaster(
         {
             firstName: 'Jasen',
             lastName: 'Baker',
@@ -128,30 +198,30 @@ DungeonMaster.remove({}).then(() => {
     )
 
     const minesPhandelver = new Adventure({
-            name: 'Lost Mines of Phandelver',
-            description: `Lost Mine of Phandelver is an adventure for four to five
+        name: 'Lost Mines of Phandelver',
+        description: `Lost Mine of Phandelver is an adventure for four to five
             characters of 1st level. During the course of the adventure,
             the characters will advance to 5th level. The adventure
             is set a short distance from the city of Neverwinter in the
             Sword Coast region of the Forgotten Realms setting. The
             Sword Coast is part of the North-a vast realm of free
             settlements surrounded by wilderness and adventure.`
-        })
+    })
 
-        minesPhandelver.players.push(therfalas, chernobob, sten)
-        minesPhandelver.encounters.push(goblinAmbush, klargCave)
+    minesPhandelver.players.push(therfalas, chernobob, sten)
+    minesPhandelver.encounters.push(goblinAmbush, klargCave)
 
     const askDirections = new Adventure({
-            name: 'Never Ask Directions',
-            description: `When the party stops to ask directions of a reclusive halfling, 
+        name: 'Never Ask Directions',
+        description: `When the party stops to ask directions of a reclusive halfling, 
             they find him eagar to point out the way. Unfortunately, 
             the path he directs them on is straigt towars a troop of 
             bandits with who the halfling intends to settle an old score.`
-        })
+    })
 
 
-    jasenBaker.adventures.push(minesPhandelver, askDirections)    
-    
+    jasenBaker.adventures.push(minesPhandelver, askDirections)
+
     return jasenBaker.save()
 }).then(() => {
     const chrisCrosby = new DungeonMaster(
@@ -164,7 +234,7 @@ DungeonMaster.remove({}).then(() => {
             gamesRan: 20
         }
     )
-    const forgeFury = new Adventure (
+    const forgeFury = new Adventure(
         {
             name: 'The Forge of Fury',
             description: `The characters come to the Stone Tooth in search of
@@ -173,8 +243,8 @@ DungeonMaster.remove({}).then(() => {
 
         }
     )
-    forgeFury.players.push(baraghVrinn,lothoHarfoot, malphas)
-    const fistTorm = new Adventure (
+    forgeFury.players.push(baraghVrinn, lothoHarfoot, malphas)
+    const fistTorm = new Adventure(
         {
             name: 'The Fist of Torm',
             description: `After a heavy storm at sea, the ship the PC’s are on 

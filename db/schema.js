@@ -25,7 +25,7 @@ const MonsterSchema = new Schema (
             required: [true, 'Needs health'],
             unique: false
         },
-        Speed: {
+        speed: {
             type: Number,
             required: [true, 'I feel a need for speed'],
             unique: false
@@ -71,11 +71,7 @@ const MonsterSchema = new Schema (
             required: false,
             unique: false,
         },
-        features: {
-            type: String,
-            required: false,
-            unique: false,
-        },
+        features: [String],
         actions: [String],
         description:{
             type: String,
