@@ -29,6 +29,32 @@ router.get('/', (req, res)=>{
     
 })
 
+router.get('/:EncountId', (req, res) =>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const EncountId = req.params.EncountId
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        const adventure = Dm.adventures.id(AdvenId)
+        const encounter = adventure.encounters.id(EncountId)
+
+        res.render('encounter/show', {
+            Dm,
+            DmId,
+            AdvenId,
+            adventure,
+            encounter,
+            title: `${encounter.location}`
+        })
+
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+    
+})
+
 
 
 
