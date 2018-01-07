@@ -717,6 +717,14 @@ input {
   font-size: 12px;
 }
 
+.playerEdit{
+  color: #10638E;
+  font-size: 16px;
+}
+.playerEdit:hover{
+  color: #D1495B;
+}
+
 
 
 
