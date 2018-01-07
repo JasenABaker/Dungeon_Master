@@ -73,6 +73,12 @@ body {
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/ranger.png') right no-repeat;
   background-size: 800px;
 }
+.Dm_main.player.edit{
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/rogue.png') right no-repeat;
+  background-size: 800px;
+
+}
+
 
 .header{
   width: 100%;
