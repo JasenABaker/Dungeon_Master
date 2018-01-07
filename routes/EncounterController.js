@@ -48,6 +48,27 @@ router.get('/new', (req, res)=>{
             console.log(err)
         })
 })
+
+router.post('/', (req, res) => {
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const newEncounter = req.body
+
+    DungeonMaster.findById(DmId)
+        .then((Dm) => {
+            const adventure = Dm.adventures.id(AdvenId)
+            adventure.encounters.push(newEncounter)
+
+            return Dm.save()
+        })
+        .then(() => {
+            res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/encounters`)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+})
+
     
 
 
