@@ -468,10 +468,10 @@ footer {
   background-color: #97D0CA
 }
 .btn.DmEdit:hover:before, .btn.submitAdven:hover:before{
-  background-color: #A0B8CB
+  background-color: #285275;
 }
 .btn.DmDelete:hover:before{
-  background-color: #EAACB4;
+  background-color: #AD3831;
 }
 .btn.DmNew:hover:before {
   background-color: #8E5572;
