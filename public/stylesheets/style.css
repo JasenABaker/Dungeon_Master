@@ -391,6 +391,19 @@ footer {
   background-color: #7AC74F;
 }
 
+.btn.player.home:hover{
+  background-color: #893168;
+}
+
+.btn.player.home.second:hover {
+  background-color: #EDAE49;
+}
+.btn.player.home.third:hover{
+  background-color: #30638E;
+}
+.btn.player.home.fourth:hover {
+  background-color: #7AC74F;
+}
 /* form submit button css */
 .btn.submit{
   border: none;
@@ -419,8 +432,11 @@ footer {
 
 
 /* hover states */
-.btn:hover, .card:hover {
+.btn:hover {
   background-color: #2E294E;
+}
+.card:hover{
+  background-color: #7AC74F;
 }
 .card.adven:hover{
   background-color: #BBBE64;
@@ -454,6 +470,9 @@ footer {
 }
 .btn.submit.new:hover {
   background-color: #8E5572
+}
+.btn.player.home{
+  background-color: rgba(50, 36, 79, .5);
 }
 
 
