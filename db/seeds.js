@@ -5,6 +5,7 @@ mongoose.Promise = global.Promise
 const DungeonMaster = require('./models/Dm')
 const Adventure = require('./models/Adventure')
 const Player = require('./models/Player')
+const Encounter = require('./models/Encounter')
 
 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -22,6 +23,28 @@ mongoose.connection.on('error', (error) => {
     `)
     process.exit(-1)
 })
+
+const klargCave = new Encounter ({
+    location: "Klarg's Cave",
+    description:`Sacks and crates of looted provisions are piled up in the
+    south end of this large cave_ To the west, the floor slopes
+    toward a narrow opening that descends into darkness. A
+    larger opening leads north down a set of natural stone steps,
+    the roar of falling water echoing from beyond. In the middle
+    of the cavern, the coals ofa large fire smolder.`
+})
+
+const goblinAmbush = new Encounter ({
+    location: 'Goblin Ambush',
+    description: `You've been on the Triboar Trail for about half a day. As you
+    come around a bend, you spot two dead horses sprawled
+    about fifty feet ahead of you, blocking the path. Each has
+    several black-feathered arrows sticking out of it. The woods
+    press close to the trail here, with a steep embankment and
+    dense thickets on either side.`
+})
+
+
 
 const baraghVrinn = new Player ({
     characterName:'Baragh Vrinn',
@@ -116,6 +139,7 @@ DungeonMaster.remove({}).then(() => {
         })
 
         minesPhandelver.players.push(therfalas, chernobob, sten)
+        minesPhandelver.encounters.push(goblinAmbush, klargCave)
 
     const askDirections = new Adventure({
             name: 'Never Ask Directions',

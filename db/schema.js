@@ -79,7 +79,7 @@ const AdventureSchema = new Schema(
             default: 'Dungeons and Dragons Adventure'
         },
         players: [PlayerSchema],
-        encounters: [],
+        encounters: [EncounterSchema],
     },
     {
         timestamps: {},
