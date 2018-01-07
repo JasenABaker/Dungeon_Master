@@ -1,16 +1,29 @@
 <div class="Dm_main player">
+
     <div class="header">
-    <div class="index_header show adven">
-        <h1>{{adventure.name}}</h1>
-        <h2 class="subject">{{title}}</h2>
+        <div class="index_header show adven">
+            <h1>{{adventure.name}}</h1>
+            <h2 class="subject">{{title}}</h2>
         </div>
         <div class="btn_container head">
-            <a href="/" class="btn player home"><span class="btn_text player">Home</span></a>
-            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}" class="btn player home second"><span class="btn_text player">Back to {{adventure.name}}</span></a>
-            <a href="/Dm/{{../DmId}}" class="btn player home third"><span class="btn_text player">Back to DMs</span></a>
+            <a href="/" class="btn player home">
+                <span class="btn_text player">Home</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}" class="btn player home second">
+                <span class="btn_text player">Back to {{adventure.name}}</span>
+            </a>
+            <a href="/Dm/{{../DmId}}" class="btn player home third">
+                <span class="btn_text player">Back to DMs</span>
+
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}/players/new" class="btn player home fourth">
+                <span class="btn_text player">Add Player</span>
+            </a>
         </div>
-    
+
     </div>
+
+
     <div class="container player">
         {{#each players}}
         <div class="player_card">
@@ -25,27 +38,31 @@
                     <div class="img char">
                         <img src="{{this.photoUrl}}" alt="{{this.characterName}}">
                     </div>
-                    <div class="numberBlock"><span class="statlabel">LVL: </span>{{this.level}}</div>
+                    <div class="numberBlock">
+                        <span class="statlabel">LVL: </span>{{this.level}}</div>
                 </div>
                 <div class="classRaceAcHp">
                     <div class="classRace">
-                        <div class="stat"><div class="statlabel">Class</div>{{this.class}}</div>
-                        <div class="stat"><div class="statlabel">Race</div>{{this.race}}</div>
+                        <div class="stat">
+                            <div class="statlabel">Class</div>{{this.class}}</div>
+                        <div class="stat">
+                            <div class="statlabel">Race</div>{{this.race}}</div>
                     </div>
                     <div class="AcHp">
-                        <div class="numberBlock"><span class="statlabel">AC: </span>{{this.armorClass}}</div>
-                        <div class="numberBlock"><span class="statlabel">HP: </span>{{this.hitPoints}}</div>
+                        <div class="numberBlock">
+                            <span class="statlabel">AC: </span>{{this.armorClass}}</div>
+                        <div class="numberBlock">
+                            <span class="statlabel">HP: </span>{{this.hitPoints}}</div>
                     </div>
                 </div>
             </div>
             <div class="bottom"></div>
-                <div class="name player">{{this.name}}</div>
-                <a href="/Dm/{{../DmId}}/adventures/{{../AdvenId}}/players/{{this.id}}/edit" class="a playerEdit">
-                    <span class="edit_text">Edit {{this.characterName}}</span>
-                </a>
-            </div>
-        {{/each}}
+            <div class="name player">{{this.name}}</div>
+            <a href="/Dm/{{../DmId}}/adventures/{{../AdvenId}}/players/{{this.id}}/edit" class="a playerEdit">
+                <span class="edit_text">Edit {{this.characterName}}</span>
+            </a>
         </div>
-        <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}/players/new" class="btn AdvenNew"><span class="btn_text player">Add Player</span></a>
+        {{/each}}
     </div>
-    
+
+</div>
