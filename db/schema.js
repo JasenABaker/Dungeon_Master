@@ -3,6 +3,27 @@ const Schema = mongoose.Schema
 
 mongoose.Promise = global.Promise
 
+const EncounterSchema = new Schema(
+    {
+        location:{
+            type: String,
+            required: [true, 'needs a location'],
+            unique:false,
+        },
+        description: {
+            type: String,
+            required: [true, 'Describe the surrondings, please'],
+            unique: false,
+        },
+        monsters: []
+        
+    },
+    {
+        timestamps: {},
+        usePushEach: true
+    }
+)
+
 const PlayerSchema = new Schema (
     {
         characterName: {
@@ -121,5 +142,6 @@ const DungeonMasterSchema = new Schema(
 module.exports = {
     DungeonMasterSchema,
     AdventureSchema,
-    PlayerSchema
+    PlayerSchema,
+    EncounterSchema
 }
