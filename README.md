@@ -1,10 +1,10 @@
 # Dungeon Master
 
 ## About
-    This app is for Dungeon and Dragons game masters also know as the Dungeon Master!
+    This app is for Dungeon and Dragons game masters also know as the Dungeon Master! It allows the dungeon master to keep track of Adventures, Players, Encounters, and Monsters.
 
 
-## EID
+## ERD
 ![Eid](https://github.com/JasenABaker/Dungeon_Master/blob/master/public/images/Screen%20Shot%202018-01-03%20at%204.42.18%20PM.png)
 
 ## WIREFRAME
@@ -18,4 +18,6 @@ The user stories for this app are located [here.](https://trello.com/b/3zKTV2S6/
 
 ## App
 The app is located [here.](https://murmuring-cliffs-92834.herokuapp.com/)
+
+
 
