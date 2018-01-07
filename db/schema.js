@@ -81,6 +81,11 @@ const MonsterSchema = new Schema (
             type: String,
             required: false,
             unique: false
+        },
+        photoUrl: {
+            type: String,
+            required: false,
+            default: 'http://vignette1.wikia.nocookie.net/forgottenrealms/images/f/f8/Monster_Manual_5e_-_Bugbear_-_p33.jpg/revision/latest?cb=20141109231300'
         }
         },
         {
