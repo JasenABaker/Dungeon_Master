@@ -1,7 +1,23 @@
 <div class="Dm_main adven edit">
-    <div class="index_header show adven">
-        <h1>Edit:</h1>
-        <h2 class="subject">{{title}}</h2>
+    <div class="header">
+        <div class="index_header show adven">
+            <h1>Edit:</h1>
+            <h2 class="subject">{{title}}</h2>
+        </div>
+        <div class="btn_container head">
+            <a href="/" class="btn player home">
+                <span class="btn_text player">Home</span>
+            </a>
+            <a href="/Dm/{{DmId}}" class="btn player home second">
+                <span class="btn_text player">Back to Dugneon Master</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures" class="btn player home third">
+                <span class="btn_text player">Back to Adventures</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}" class="btn player home fourth">
+                <span class="btn_text player">Back to {{adventure.name}}</span>
+            </a>
+        </div>
     </div>
     <div class="container adven">
 
@@ -9,28 +25,24 @@
 
         <div class="card_container">
 
-            
-                <form class="adven_form" action="/Dm/{{DmId}}/adventures/{{adventure._id}}?_method=PUT" method="POST" id="form1">
-                    <div class="add adven edit">
-                        <div class="form adven">
-                            <label for="name">Name:</label>
-                            <input type="text" class="input" name="name" value="{{adventure.name}}">
-                        </div>
-                        <div class="form adven">
-                            <label for="description">Description:</label>
-                            <input type="text" class="input" name="description" value="{{adventure.description}}">
-                        </div>
 
-                        <input type="submit" class="btn submitAdven" value="Edit {{adventure.name}}">
+            <form class="adven_form" action="/Dm/{{DmId}}/adventures/{{adventure._id}}?_method=PUT" method="POST" id="form1">
+                <div class="add adven edit">
+                    <div class="form adven">
+                        <label for="name">Name:</label>
+                        <input type="text" class="input" name="name" value="{{adventure.name}}">
                     </div>
-                </form>
+                    <div class="form adven">
+                        <label for="description">Description:</label>
+                        <input type="text" class="input" name="description" value="{{adventure.description}}">
+                    </div>
 
-                <div class="btn_container adven">
-                    <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}" class="btn AdvenBack">
-                        <span class="btn_text">Back to {{adventure.name}}</span>
-                    </a>
+                    <input type="submit" class="btn submitAdven" value="Edit {{adventure.name}}">
                 </div>
-            
+            </form>
+
+
+
 
         </div>
     </div>

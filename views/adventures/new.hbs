@@ -1,6 +1,21 @@
 <div class="Dm_main adven new">
-    <div class="index_header show adven">
-        <h1>{{title}}</h1>
+    <div class="header">
+        <div class="index_header show adven">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="btn_container head">
+            <a href="/" class="btn player home">
+                <span class="btn_text player">Home</span>
+            </a>
+            <a href="/Dm/{{DmId}}" class="btn player home second">
+                <span class="btn_text player">Back to Dugneon Master</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures" class="btn player home third">
+                <span class="btn_text player">Back to Adventures</span>
+            </a>
+
+        </div>
+
     </div>
     <div class="container adven">
 
@@ -23,13 +38,6 @@
                     <input type="submit" class="btn submitAdven" value="Create Adventure">
                 </div>
             </form>
-
-            <div class="btn_container adven">
-                <a href="/Dm/{{DmId}}/adventures" class="btn AdvenBack">
-                    <span class="btn_text">Back to Adventures</span>
-                </a>
-            </div>
-
 
         </div>
     </div>
