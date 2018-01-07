@@ -336,11 +336,14 @@ footer {
 .btn{
   height: 50px;
   width: 250px;
-  background-color: #893168;
+  background-color: #2E294E;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  transform: translateZ(0);
+  transition: color 1000ms;
 }
 
 .btn.adventure{
@@ -390,20 +393,12 @@ footer {
 .btn.AdvenEncounter{
   background-color: #7AC74F;
 }
-
-.btn.player.home:hover{
-  background-color: #893168;
+.btn.player.home{
+  background-color: rgba(50, 36, 79, .5);
 }
 
-.btn.player.home.second:hover {
-  background-color: #EDAE49;
-}
-.btn.player.home.third:hover{
-  background-color: #30638E;
-}
-.btn.player.home.fourth:hover {
-  background-color: #7AC74F;
-}
+
+
 /* form submit button css */
 .btn.submit{
   border: none;
@@ -421,8 +416,10 @@ footer {
 
 /* button text Css */
 .btn_text{
+  font-family: 'Playfair Display', serif;
   color: #E5E5E5;
-  font-size: 18px
+  font-size: 24px;
+  font-weight: 600;
 }
 .btn_text.player{
   font-size: 16px;
@@ -432,8 +429,8 @@ footer {
 
 
 /* hover states */
-.btn:hover {
-  background-color: #2E294E;
+.btn:hover:before {
+  transform: scaleX(1);
 }
 .card:hover{
   background-color: #7AC74F;
@@ -441,40 +438,107 @@ footer {
 .card.adven:hover{
   background-color: #BBBE64;
 }
-.btn.adventure:hover{
+.btn.adventure:hover:before{
   background-color: #97D0CA
 }
-.btn.DmEdit:hover, .btn.submitAdven:hover{
+.btn.DmEdit:hover:before, .btn.submitAdven:hover:before{
   background-color: #A0B8CB
 }
-.btn.DmDelete:hover{
+.btn.DmDelete:hover:before{
   background-color: #EAACB4;
 }
-.btn.DmNew:hover {
+.btn.DmNew:hover:before {
   background-color: #8E5572;
 }
-.btn.submit:hover{
+.btn.submit:hover:before{
   background-color: #893168;
 }
-.btn.AdvenNew:hover{
+.btn.AdvenNew:hover:before{
   background-color: #FF521B;
 }
-.btn.AdvenEncounter:hover {
+.btn.AdvenEncounter:hover:before {
   background-color: #436D2C;
 }
-.btn.player.add:hover {
+.btn.player.add:hover:before {
   background-color: #30638E;;
 }
-.btn.player.back:hover {
+.btn.player.back:hover:before {
   background-color: #436D2C;
 }
-.btn.submit.new:hover {
+.btn.submit.new:hover:before {
   background-color: #8E5572
 }
-.btn.player.home{
-  background-color: rgba(50, 36, 79, .5);
+.btn.player.home:hover:before{
+  background-color: #893168;
 }
 
+.btn.player.home.second:hover:before {
+  background-color: #EDAE49;
+}
+.btn.player.home.third:hover:before{
+  background-color: #30638E;
+}
+.btn.player.home.fourth:hover:before {
+  background-color: #7AC74F;
+}
+
+
+/* animation stuff */
+.btn:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #893168;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: 300ms ease-out;
+}
+.btn.adventure:before{
+  background-color: #97D0CA
+}
+.btn.DmEdit:before, .btn.submitAdven:before{
+  background-color: #A0B8CB
+}
+.btn.DmDelete:before{
+  background-color: #EAACB4;
+}
+.btn.DmNew:before {
+  background-color: #8E5572;
+}
+.btn.submit:before{
+  background-color: #893168;
+}
+.btn.AdvenNew:before{
+  background-color: #FF521B;
+}
+.btn.AdvenEncounter:before {
+  background-color: #436D2C;
+}
+.btn.player.add:before {
+  background-color: #30638E;;
+}
+.btn.player.back:before {
+  background-color: #436D2C;
+}
+.btn.submit.new:before {
+  background-color: #8E5572
+}
+.btn.player.home:before{
+  background-color: #893168;
+}
+.btn.player.home.second:before {
+  background-color: #EDAE49;
+}
+.btn.player.home.third:before{
+  background-color: #30638E;
+}
+.btn.player.home.fourth:before {
+  background-color: #7AC74F;
+}
 
 
 
@@ -555,7 +619,8 @@ input {
   align-self: flex-end;
 }
 .center h3{
-  font-size: 24px;
+  font-family: 'Alegreya', serif;
+  font-size: 30px;
   font-weight: 700;
 }
 .center p{
@@ -574,6 +639,7 @@ input {
 }
 .username  h2 {
   margin-bottom: 0;
+  font-family: 'Alegreya', serif;
   font-size: 36px;
   color: #ED4C43;
 }
@@ -587,10 +653,15 @@ input {
   font-weight: 700;
 }
 .index_header h1 {
+  font-family: 'Bellefair', serif;
   margin: 0px 20px;
-  font-size: 48px;
+  font-size: 52px;
   color: #262021;
   
+}
+.index_header h2 {
+  font-family: 'Alegreya', serif;
+  font-size: 48px;
 }
 .index_header.show h1, .index_header.show h2{
   margin-top: 0;
