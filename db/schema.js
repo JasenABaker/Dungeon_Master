@@ -231,5 +231,6 @@ module.exports = {
     DungeonMasterSchema,
     AdventureSchema,
     PlayerSchema,
-    EncounterSchema
+    EncounterSchema,
+    MonsterSchema
 }
