@@ -141,7 +141,7 @@ router.put('/:EncountId', (req, res) => {
             return Dm.save()
         })
         .then(() => {
-            res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/encounters`)
+            res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/encounters/`)
         })
         .catch((err) => {
             console.log(err)

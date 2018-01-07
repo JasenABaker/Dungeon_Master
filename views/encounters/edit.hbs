@@ -1,0 +1,45 @@
+<div class="Dm_main encount new">
+    <div class="header">
+        <div class="index_header show adven">
+            <h1>{{adventure.name}}</h1>
+            <h2 class="subject">{{title}}</h2>
+        </div>
+        <div class="btn_container head">
+            <a href="/" class="btn player home">
+                <span class="btn_text player">Home</span>
+            </a>
+            <a href="/Dm/{{DmId}}" class="btn player home second">
+                <span class="btn_text player">Back to {{Dm.username}}</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}" class="btn player home third">
+                <span class="btn_text player">Back to {{adventure.name}}</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}/encounters" class="btn player home fourth">
+                <span class="btn_text player">Back to Encounters</span>
+            </a>
+
+        </div>
+    </div>
+    <div class="container adven">
+
+        <div class="card_container">
+
+            <div class="card edit show">
+                <form class="form player" action="/Dm/{{DmId}}/adventures/{{adventure._id}}/encounters/{{encounter._id}}?_method=PUT" method="POST">
+                    <div class="formLabel">
+                        <label for="location" class="label player new">Location:</label>
+                        <input type="text" name="location" value="{{encounter.location}}">
+                    </div>
+                    <div class="formLabel">
+                        <label for="desciption" class="label player new">Description:</label>
+                        <input type="text" name="description" value="{{encounter.description}}">
+                    </div>
+                    <div class="btn_container">
+                        <input type="submit" class="btn submit new" value="Update Encounter">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
