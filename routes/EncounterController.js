@@ -14,6 +14,7 @@ router.get('/', (req, res)=>{
             const encounters = adventure.encounters
 
             res.render('encounters/index', {
+                Dm,
                 DmId,
                 AdvenId,
                 adventure,

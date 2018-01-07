@@ -1,4 +1,4 @@
-<div class="Dm_main adven">
+<div class="Dm_main encount">
     <div class="header">
         <div class="index_header show adven">
             <h1>{{adventure.name}}</h1>
@@ -11,7 +11,7 @@
             <a href="/Dm/{{DmId}}" class="btn player home second">
                 <span class="btn_text player">Back to {{Dm.username}}</span>
             </a>
-            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}" class="btn player home second">
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}" class="btn player home third">
                 <span class="btn_text player">Back to {{adventure.name}}</span>
             </a>
 
@@ -28,7 +28,7 @@
         <div class="card_container">
             {{#each encounters}}
 
-            <a href="/Dm/{{../DmId}}/adventures/{{adventure._id}}/encounters/{{this.id}}" class="link card adven">
+            <a href="/Dm/{{../DmId}}/adventures/{{adventure._id}}/encounters/{{this.id}}" class="link card edit">
                 <div class="info">
                     <div class="username adven">
                         <h2>{{this.location}}</h2>

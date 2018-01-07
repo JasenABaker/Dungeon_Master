@@ -31,6 +31,8 @@ body {
   /* border: 5px solid green; */
 
 }
+
+/* Background image change */
 .Dm_main{
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/fighter.png') right no-repeat;
   background-size: 800px;
@@ -73,10 +75,9 @@ body {
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/ranger.png') right no-repeat;
   background-size: 800px;
 }
-.Dm_main.player.edit{
-  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/rogue.png') right no-repeat;
-  background-size: 800px;
-
+.Dm_main.encount{
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/swordcoast.jpg') right no-repeat;
+  background-size: 1000px;
 }
 
 
@@ -198,6 +199,14 @@ footer {
   justify-content: space-between;
   border-radius: 15px;
   border: #262021 5px solid;
+}
+
+.card.edit {
+  height: 15%;
+  width: 30%;
+  background-color: #F2EFE9;
+  border-radius: 0;
+  border: #262021 2px solid;
 }
 .advenShow{
   height: 85%;
@@ -437,6 +446,9 @@ footer {
 }
 .card.adven:hover{
   background-color: #BBBE64;
+}
+.card.edit:hover {
+  background-color: #10638E;
 }
 .btn.adventure:hover:before{
   background-color: #97D0CA
