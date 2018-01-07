@@ -13,6 +13,7 @@ const DmController = require('./routes/DmController')
 const AdventureController = require('./routes/AdventureController')
 const PlayerController = require('./routes/PlayerController')
 const EncounterController = require('./routes/EncounterController')
+const MonsterController = require('./routes/MonsterController')
 const users = require('./routes/users');
 
 const app = express();
@@ -53,6 +54,7 @@ app.use('/Dm', DmController)
 app.use('/Dm/:DmId/Adventures', AdventureController)
 app.use('/Dm/:DmId/Adventures/:AdvenId/Players', PlayerController)
 app.use('/Dm/:DmId/Adventures/:AdvenId/Encounters', EncounterController)
+app.use('/Dm/:DmId/Adventures/:AdvenId/Encounters/:EncountId/Monsters', MonsterController)
 app.use('/users', users);
 
 // catch 404 and forward to error handler
