@@ -98,6 +98,31 @@ router.get('/:EncountId', (req, res) =>{
     
 })
 
+router.get('/:EncountId/edit', (req, res) => {
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const EncountId = req.params.EncountId
+
+    DungeonMaster.findById(DmId)
+        .then((Dm) => {
+            const adventure = Dm.adventures.id(AdvenId)
+            const encounter = adventure.encounters.id(EncountId)
+            res.render('encounters/edit', {
+                DmId,
+                adventure,
+                AdvenId,
+                encounter,
+                EncountId,
+                title: 'Edit'
+            })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+
+})
+
+
 router.get('/:EncountId/delete', (req, res) => {
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
