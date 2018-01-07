@@ -84,6 +84,34 @@ const bugBear = new Monster ({
     photoUrl: 'https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/221/1000/1000/636252765234633232.jpeg'
 })
 
+const wolf = new Monster ({
+    name: 'Wolf',
+    xp: 50,
+    armorClass: 13,
+    hitPoints: 11,
+    speed: 40,
+    stats: {
+        str: 12,
+        dex: 15,
+        con: 12,
+        int: 3,
+        wis: 12,
+        cha: 6,
+    },
+    skills:'Perception +3, Stealth +4',
+    senses: 'Passive Perception 13',
+    features: [`Keen Hearing and Smell. The wolf has advantage on Wisdom 
+    (Perception) checks that rely on hearing or smell`,`Pack Tactics. The wolf 
+    has advantage on attack rolls against a creature if at least one of the 
+    wolf's allies is within 5 feet of the creature and the ally isn't 
+    incapacitated.`],
+    actions:[`Bite. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. 
+    Hit: 7 (2d4 + 2) piercing damage. If the target is a creature, 
+    it must succeed on a DC 11 Strength saving throw or be knocked prone.`],
+    description:`Its a wolf`,
+    photoUrl: 'https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/482/1000/1000/636376300223855327.jpeg'
+})
+
 
 
 
@@ -184,6 +212,7 @@ const malphas = new Player({
 DungeonMaster.remove({}).then(() => {
 
     goblinAmbush.monsters.push(goblin, goblin)
+    klargCave.monsters.push(bugBear, wolf, goblin, goblin)
 
     const jasenBaker = new DungeonMaster(
         {
