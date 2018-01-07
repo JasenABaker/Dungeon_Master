@@ -79,6 +79,11 @@ body {
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/swordcoast.jpg') right no-repeat;
   background-size: 1000px;
 }
+.Dm_main.encount.show {
+  background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/MoonIslands.jpg') right no-repeat;
+  background-size: 900px;
+
+}
 
 
 .header{
@@ -207,6 +212,12 @@ footer {
   background-color: #F2EFE9;
   border-radius: 0;
   border: #262021 2px solid;
+}
+.card.edit.show{
+  height: 55%;
+  width: 75%;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .advenShow{
   height: 85%;
@@ -449,6 +460,9 @@ footer {
 }
 .card.edit:hover {
   background-color: #10638E;
+}
+.card.edit.show:hover{
+  background-color: #F2EFE9;
 }
 .btn.adventure:hover:before{
   background-color: #97D0CA
@@ -737,6 +751,11 @@ input {
   color: #D1495B;
 }
 
+.edit.body p{
+  font-size: 24px;
+  text-align: center;
+  margin: 0 10px;
+}
 
 
 

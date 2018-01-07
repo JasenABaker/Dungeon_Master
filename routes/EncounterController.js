@@ -39,7 +39,7 @@ router.get('/:EncountId', (req, res) =>{
         const adventure = Dm.adventures.id(AdvenId)
         const encounter = adventure.encounters.id(EncountId)
 
-        res.render('encounter/show', {
+        res.render('encounters/show', {
             Dm,
             DmId,
             AdvenId,

@@ -20,7 +20,7 @@
     <div class="container adven">
 
         <div class="btn_container adven">
-            <a href="//Dm/{{DmId}}/adventures/{{adventure._id}}/encounters/nes" class="btn AdvenNew">
+            <a href="//Dm/{{DmId}}/adventures/{{adventure._id}}/encounters/new" class="btn AdvenNew">
                 <span class="btn_text">New Encounter</span>
             </a>
         </div>
@@ -28,7 +28,7 @@
         <div class="card_container">
             {{#each encounters}}
 
-            <a href="/Dm/{{../DmId}}/adventures/{{adventure._id}}/encounters/{{this.id}}" class="link card edit">
+            <a href="/Dm/{{../DmId}}/adventures/{{../adventure._id}}/encounters/{{this.id}}" class="link card edit">
                 <div class="info">
                     <div class="username adven">
                         <h2>{{this.location}}</h2>

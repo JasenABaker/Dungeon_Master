@@ -1,0 +1,46 @@
+<div class="Dm_main encount show">
+    <div class="header">
+        <div class="index_header show adven">
+            <h1>{{adventure.name}}</h1>
+            <h2 class="subject">{{title}}</h2>
+        </div>
+        <div class="btn_container head">
+            <a href="/" class="btn player home">
+                <span class="btn_text player">Home</span>
+            </a>
+            <a href="/Dm/{{DmId}}" class="btn player home second">
+                <span class="btn_text player">Back to {{Dm.username}}</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}" class="btn player home third">
+                <span class="btn_text player">Back to {{adventure.name}}</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}/encounters" class="btn player home fourth">
+                <span class="btn_text player">Back to Encounters</span>
+            </a>
+
+        </div>
+    </div>
+    <div class="container adven">
+
+        <div class="card_container">
+
+            <div class="card edit show">
+                    <div class="edit body">
+                        <p>{{encounter.description}}</p>
+                    </div>
+                
+                <div class="btn_container adven">
+                    <a href="//Dm/{{DmId}}/adventures/{{../adventure._id}}/encounters/{{ecnoutner._id}}/monsters" class="btn AdvenEncounter">
+                        <span class="btn_text">To Monsters!</span>
+                    </a>
+                    <a href="//Dm/{{DmId}}/adventures/{{../adventure._id}}/encounters/{{ecnoutner._id}}/edit" class="btn DmEdit">
+                        <span class="btn_text">Edit {{encounter.location}}</span>
+                    </a>
+                    <a href="//Dm/{{DmId}}/adventures/{{../adventure._id}}/encounters/{{ecnoutner._id}}/delete" class="btn DmDelete">
+                        <span class="btn_text">Delete {{encounter.location}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
