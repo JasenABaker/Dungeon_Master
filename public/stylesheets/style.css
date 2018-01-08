@@ -951,6 +951,9 @@ input {
     .classRaceAcHp{
       flex-direction: row;
     }
+    .player_card.new {
+      width: 60%;
+    }
   
 
   }
@@ -1060,6 +1063,12 @@ input {
   }
   .classRaceAcHp{
     flex-direction: row;
+  }
+  .index_header.show h2 {
+    width: 200px;
+  }
+  .player_card.new {
+    width: 60%;
   }
 
     }
