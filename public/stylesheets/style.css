@@ -902,6 +902,12 @@ input {
     .label {
       font-size: 24px;
     }
+    label {
+      font-size: 32px;
+    }
+    input {
+      font-size: 32px;
+    }
   
 
   }
@@ -962,6 +968,18 @@ input {
     .btn.submit{
       width: 50%;
       font-size: 12px;
+    }
+    .master {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dm_info {
+      height: 95%;
+      width: 95%;
+    }
+    .image_show {
+      display: none;
     }
     }
     
