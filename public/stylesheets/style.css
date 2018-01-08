@@ -908,6 +908,9 @@ input {
     input {
       font-size: 32px;
     }
+    .username.adven h2 {
+      font-size: 36px;
+    }
   
 
   }
@@ -981,6 +984,7 @@ input {
     .image_show {
       display: none;
     }
+
     }
     
 
