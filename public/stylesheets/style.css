@@ -824,6 +824,14 @@ input {
 
 @media only screen
  and (max-device-width: 500px) {
+   body{
+     height: 100vh;
+     width: 100vw;
+   }
+   .Dm_mainPage.new {
+     height: 100vh;
+     width: 100vw;
+   }
   .index_header {
     margin-top: 50px;
     margin-bottom: 0;
@@ -865,6 +873,13 @@ input {
       align-items: center;
       height: 50vh;
     }
+    .itemView.show {
+      align-items: center;
+      height: 70vh;
+    }
+    .master {
+      width: 90%;
+    }
 
     .btn_container.head {
       height: 19%
@@ -883,6 +898,9 @@ input {
     }
     .master.add {
       height: 90%;
+    }
+    .label {
+      font-size: 24px;
     }
   
 
