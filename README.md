@@ -12,6 +12,10 @@ This app is for Dungeon and Dragons game masters also know as the Dungeon Master
 
 ![Wirefarme two](https://github.com/JasenABaker/Dungeon_Master/blob/master/public/images/Screen%20Shot%202018-01-03%20at%204.43.39%20PM.png)
 
+![Wireframe three](https://github.com/JasenABaker/Dungeon_Master/blob/master/public/images/Screen%20Shot%202018-01-08%20at%2012.06.01%20PM.png)
+
+![Wireframe four](https://github.com/JasenABaker/Dungeon_Master/blob/master/public/images/Screen%20Shot%202018-01-08%20at%2012.06.24%20PM.png)
+
 ## Trello Board User Stories
 The user stories for this app are located [here.](https://trello.com/b/3zKTV2S6/project-two)
 
