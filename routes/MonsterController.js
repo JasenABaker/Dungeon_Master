@@ -134,6 +134,36 @@ router.post('/', (req, res)=>{
 
 })
 
+router.put('/:MonstId', (req,res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const EncountId = req.params.EncountId
+    const MonstId = req.params.MonstId
+    const updatedMonster = req.body
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        const adventure = Dm.adventures.id(AdvenId)
+        const encounter = adventure.encounters.id(EncountId)
+        encounter.monsters.id(MonstId).remove()
+
+        return Dm.save()
+    })
+    .then((Dm)=>{
+        const adventure = Dm.adventures.id(AdvenId)
+        const encounter = adventure.encounters.id(EncountId)
+        encounter.monsters.push(updatedMonster)
+
+        return Dm.save()
+    })
+    .then(()=>{
+        res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/encounters/${encountId}/monsters`)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
 
 
 
