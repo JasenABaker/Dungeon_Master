@@ -911,6 +911,19 @@ input {
     .username.adven h2 {
       font-size: 36px;
     }
+    .advenShow {
+      height: 60%;
+    }
+    .descript {
+      font-size: 30px;
+    }
+    .btn_text {
+      font-size: 18px;
+    }
+    .btn {
+      height: 45px;
+      width: 150px;
+    }
   
 
   }
@@ -984,6 +997,16 @@ input {
     .image_show {
       display: none;
     }
+    .descript {
+      font-size: 18px;
+  }
+  .btn_text {
+    font-size: 12px;
+  }
+  .btn {
+    height: 40px;
+    width: 100px;
+  }
 
     }
     
