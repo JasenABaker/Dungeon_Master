@@ -924,6 +924,33 @@ input {
       height: 45px;
       width: 150px;
     }
+    .btn.submitAdven {
+      font-size: 8px;
+    }
+    .container.player {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    .player_card {
+      height: 10%;
+      width: 50%;
+    }
+    .top{
+      height: 10%;
+    }
+    .bottom {
+      height: 10%;
+    }
+    .player_icon{
+      height: 70%;
+    }
+    .img.char {
+      display: none;
+    }
+    .classRaceAcHp{
+      flex-direction: row;
+    }
   
 
   }
@@ -1006,6 +1033,33 @@ input {
   .btn {
     height: 40px;
     width: 100px;
+  }
+  .btn.submitAdven {
+    font-size: 8px;
+  }
+  .container.player {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .player_card {
+    height: 30%;
+    width: 70%;
+  }
+  .top{
+    height: 10%;
+  }
+  .bottom {
+    height: 10%;
+  }
+  .player_icon{
+    height: 70%;
+  }
+  .img.char {
+    display: none;
+  }
+  .classRaceAcHp{
+    flex-direction: row;
   }
 
     }
