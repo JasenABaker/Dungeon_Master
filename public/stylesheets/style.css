@@ -1070,6 +1070,12 @@ input {
   .player_card.new {
     width: 60%;
   }
+  .card.edit.show {
+    height: 65%;
+  }
+  .edit.body p {
+    font-size: 18px;
+  }
 
     }
     
