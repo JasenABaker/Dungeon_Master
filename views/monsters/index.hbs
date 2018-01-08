@@ -1,0 +1,112 @@
+<div class="Dm_main player">
+
+    <div class="header">
+        <div class="index_header show adven">
+            <h1>{{encounter.location}}</h1>
+            <h2 class="subject">{{title}}</h2>
+        </div>
+        <div class="btn_container head">
+            <a href="/" class="btn player home">
+                <span class="btn_text player">Home</span>
+            </a>
+            <a href="/Dm/{{../DmId}}" class="btn player home second">
+                <span class="btn_text player">Back to {{Dm.username}}</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}" class="btn player home third">
+                <span class="btn_text player">Back to {{adventure.name}}</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{AdvenId}}/encounters/{{encounter._id}}" class="btn player home fourth">
+                <span class="btn_text player">Back to {{encounter.location}}</span>
+            </a>
+            <a href="/Dm/{{DmId}}/adventures/{{adventure._id}}/encounters/{{encounter._id}}/monsters/new" class="btn player home fifth">
+                <span class="btn_text player">Add Monster</span>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="container player">
+        {{#each monsters}}
+        <div class="player_card monster">
+            <div class="top monster">
+                <div class="name char">{{this.name}}</div>
+                <a href="/Dm/{{../DmId}}/adventures/{{../AdvenId}}/encounters/{{encounter._id}}/monsters{{this._id}}/delete" class="a playerDelete">
+                    <span class="X_text">X</span>
+                </a>
+            </div>
+            <div class="player_icon monster">
+                <div class="photoLvl">
+                    <div class="img char">
+                        <img src="{{this.photoUrl}}" alt="{{this.name}}">
+                    </div>
+                    <div class="numberBlock">
+                        <span class="statlabel">Xp: </span>{{this.xp}}</div>
+                </div>
+                <div class="classRaceAcHp">
+                    <div class="AcHp monster">
+                        <div class="numberBlock">
+                            <span class="statlabel">AC: </span>{{this.armorClass}}</div>
+                        <div class="numberBlock">
+                            <span class="statlabel">HP: </span>{{this.hitPoints}}</div>
+                    </div>
+                    <div class="classRace Mstats">
+                        <div class="stat">
+                            <div class="statBlock">
+                                <span class="statlabel">Str:</span>
+                                <span class="statValue">{{this.stats.str}}</span>
+                            </div>
+                            <div class="statBlock">
+                                <span class="statlabel">Dex:</span>
+                                <span class="statValue">{{this.stats.dex}}</span>
+                            </div>
+                            <div class="statBlock">
+                                <span class="statlabel">Con:</span>
+                                <span class="statValue">{{this.stats.con}}</span>
+                            </div>
+                            <div class="statBlock">
+                                <span class="statlabel">Int:</span>
+                                <span class="statValue">{{this.stats.int}}</span>
+                            </div>
+                            <div class="statBlock">
+                                <span class="statlabel">Wis:</span>
+                                <span class="statValue">{{this.stats.wis}}</span>
+                            </div>
+                            <div class="statBlock">
+                                <span class="statlabel">Cha:</span>
+                                <span class="statValue">{{this.stats.cha}}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bottom monster">
+                <div class="bottomSec">
+                <div class="xtLabels">
+                    <span class="statlabel">Skills:</span>
+                    <p>{{this.skills}}</p>
+                </div>
+                <div class="xtLabels">
+                    <span class="statlabel">Senses:</span>
+                    <p>{{this.senses}}</p>
+                </div>
+                <div class="xtLabels">
+                    <span class="statlabel">Features:</span>{{#each this.features}}
+                    <p>{{this}}</p>{{/each}}</div>
+                <div class="xtLabels">
+                    <span class="statlabel">Actions:</span>{{#each this.actions}}
+                    <p>{{this}}</p>{{/each}}</div>
+                <div class="xtLabels">
+                    <span class="statlabel">Description:</span>
+                    <p>{{this.description}}</p>
+                </div>
+                </div>
+                <a href="/Dm/{{../DmId}}/adventures/{{../AdvenId}}/encounters/{{encount._id}}/monsters{{this.id}}/edit" class="a playerEdit">
+                    <span class="edit_text">Edit {{this.name}}</span>
+                </a>
+            </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

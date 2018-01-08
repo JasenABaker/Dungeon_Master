@@ -153,6 +153,7 @@ body {
   width: 100vw;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   
 
 }
@@ -306,12 +307,21 @@ footer {
   width: 30%;
   height: 100%;
 }
+.player_card.monster{
+  width: 30%;
+  height: 110%;
+  justify-content: space-between;
+}
 
 .player_icon{
   height: 90%;
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.player_icon.monster {
+  height: 40%;
 }
 
 .photoLvl {
@@ -342,14 +352,31 @@ footer {
   height: 40%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+.AcHp.player{
+  flex-direction: column;
+}
+.AcHp.monster{
+  display: flex;
+  flex-direction: row;
 }
 .top {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+.top.monster {
+  height: 5%;
+}
+.bottom.monster {
+  height: 60%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -595,7 +622,6 @@ img{
   width: 110%;
   border: #262021 2px solid;
 }
-
 
 
 
