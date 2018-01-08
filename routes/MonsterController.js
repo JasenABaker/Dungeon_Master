@@ -56,6 +56,37 @@ router.get('/new', (req, res) => {
         })
 })
 
+router.get('/:MonstId/edit', (req, res)=>{
+    const DmId = req.params.DmId
+    const AdvenId = req.params.AdvenId
+    const EncountId = req.params.EncountId
+    const MonstId = req.params.MonstId
+
+    DungeonMaster.findById(DmId)
+    .then((Dm)=>{
+        const adventure = Dm.adventures.id(AdvenId)
+        const encounter = adventure.encounters.id(EncountId)
+        const monster = encounter.monsters.id(MonstId)
+
+        res.render('monsters/edit', {
+            DmId,
+            adventure,
+            AdvenId,
+            encounter,
+            EncountId,
+            monster,
+            MonstId,
+            title: 'Edit'
+
+        })
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+
+})
+
+
 router.get('/:MonstId/delete', (req, res)=>{
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
