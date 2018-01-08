@@ -833,9 +833,7 @@ input {
   }
 
     .index_header h1{
-      font-size: 48px;
-      
-    
+      font-size: 54px;
     }
     footer {
       width: 100vw;
@@ -860,49 +858,93 @@ input {
     .center span{
       font-size: 36px;
     }
+
+    .itemView {
+      flex-direction: column;
+      justify-content: none;
+      align-items: center;
+      height: 50vh;
+    }
+
+    .btn_container.head {
+      height: 19%
+    }
+    .card {
+      width: 50%;
+    }
+    .info {
+      width: 65%;
+    }
+    .image {
+      width: 35%;
+    }
+    .username h2 {
+      font-size: 30px;
+    }
+    .master.add {
+      height: 90%;
+    }
   
 
   }
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+    .page{
+      justify-content: space-between;
+    }
     .index_header {
       margin-top: 50px;
-      margin-bottom: 0;
+      margin-bottom: 20px;
       align-self: center;
       height: 10vh;
       width: 50vw;
     }
-  
-      .index_header h1{
-        font-size: 24px;
-        
-      
-      }
-      footer {
-        width: 100vw;
-      }
-      .side {
-        display: none;
-      }
-      .main{
-        width: 100%;
-      }
-      .center h3, .center p{
-        font-size: 24px;
-      
-  
-      }
-  
-      .center a {
-        height: 50px;
-        width: 200px
-      }
-  
-      .center span{
-        font-size: 18px;
-      }
-    
-  
+    .index_header h1{
+    font-size: 36px;
     }
+    .secondPart{
+      font-size: 24px;
+    }
+    footer {
+      width: 100vw;
+    }
+    .side {
+      display: none;
+    }
+    .main{
+    width: 100%;
+    }
+    .center h3, .center p{
+      font-size: 24px;
+    }
+    .center a {
+      height: 50px;
+      width: 200px
+    }
+    .center span{
+      font-size: 18px;
+    }
+    .image{
+      display: none;
+    }
+    .info{
+      width: 100%;
+    }
+    .username h2{
+      font-size: 24px;
+    }
+    .index_header.show h2{
+      margin-left: 200px;
+      font-size: 30px;
+    }
+    .container.new {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .btn.submit{
+      width: 50%;
+      font-size: 12px;
+    }
+    }
+    
 
-  }
