@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
                 AdvenId,
                 adventure,
                 encounter,
+                EncountId,
                 monsters,
                 title: 'Monsters'
             })
