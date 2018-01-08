@@ -87,6 +87,9 @@ body {
   background:linear-gradient(0deg, rgba(229,229,229,0.5), rgba(229,229,229,0.5)), url('/images/Phan.jpg') right no-repeat;
   background-size: 700px;
 }
+.Dm_main.player.monster.new {
+  height: 110%;
+}
 
 
 
@@ -311,6 +314,9 @@ footer {
   width: 30%;
   height: 110%;
   justify-content: space-between;
+}
+.player_card.monster.new {
+  width: 50%;
 }
 
 .player_icon{
@@ -599,6 +605,9 @@ footer {
 .btn.player.home.fourth:before {
   background-color: #7AC74F;
 }
+.btn.player.home.fifth:before {
+  background-color: #FF521B;
+}
 
 
 
@@ -637,9 +646,11 @@ label{
   font-size: 16px;
   color: #262021;
   font-weight: 700;
+
 }
 input {
   font-size: 16px;
+
 }
 .adven_form{
   height: 60%;
@@ -665,6 +676,11 @@ input {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.formLabel.double {
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 

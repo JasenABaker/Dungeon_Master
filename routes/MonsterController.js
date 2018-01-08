@@ -48,7 +48,6 @@ router.get('/new', (req, res) => {
                 AdvenId,
                 adventure,
                 encounter,
-                monsters,
                 title: 'Add Monster to:'
             })
         })
