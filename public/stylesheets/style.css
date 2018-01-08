@@ -805,6 +805,9 @@ input {
   text-align: center;
   margin: 0 10px;
 }
+.name.char {
+  font-family: 'Alegreya', serif;
+}
 
 
 
@@ -943,7 +946,7 @@ input {
       height: 10%;
     }
     .player_icon{
-      height: 70%;
+      height: 40%;
     }
     .img.char {
       display: none;
@@ -954,7 +957,20 @@ input {
     .player_card.new {
       width: 60%;
     }
-  
+    .player_card.monster {
+      width: 70%;
+      height: 50%;
+    }
+    .playerDelete {
+      font-size: 38px;
+    }
+    .name.char {
+      font-size: 38px;
+    }
+    .player_card.monster.new {
+      width: 70%;
+      height: 110%;
+    }
 
   }
 
@@ -1075,6 +1091,14 @@ input {
   }
   .edit.body p {
     font-size: 18px;
+  }
+  .player_card.monster {
+    width: 70%;
+    height: 90%;
+  }
+  .player_card.monster.new {
+    width: 70%;
+    height: 110%;
   }
 
     }
