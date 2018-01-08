@@ -135,7 +135,7 @@ router.post('/', (req, res)=>{
 
 })
 
-router.put('/:MonstId', (req,res)=>{
+router.put('/:MonstId', (req, res)=> {
     const DmId = req.params.DmId
     const AdvenId = req.params.AdvenId
     const EncountId = req.params.EncountId
@@ -157,8 +157,8 @@ router.put('/:MonstId', (req,res)=>{
 
         return Dm.save()
     })
-    .then(()=>{
-        res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/encounters/${encountId}/monsters`)
+    .then(()=> {
+        res.redirect(`/Dm/${DmId}/adventures/${AdvenId}/encounters/${EncountId}/monsters`)
     })
     .catch((err)=>{
         console.log(err)
